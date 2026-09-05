@@ -31,6 +31,14 @@
     {{ end }}
   </div>
 
+  {{ with .Params.lineage_nav }}
+  <div class="lineage-kicker" aria-label="Case study lineage">
+    {{ range first 1 . }}
+    <a href="{{ .url | relURL }}"><span>{{ .direction }}</span> {{ .title }} <span aria-hidden="true">→</span></a>
+    {{ end }}
+  </div>
+  {{ end }}
+
   {{ with .Params.source_lineage }}
   <aside class="source-lineage" aria-labelledby="source-lineage-title">
     <p class="eyebrow">Source and lineage</p>
