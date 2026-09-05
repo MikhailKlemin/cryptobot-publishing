@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="title desc">
+  <title id="title">Research 005 mean daily net return by frozen fold</title>
+  <desc id="desc">Fold one 8.89 basis points per day, fold two 14.06, fold three negative 14.27, fold four 14.00.</desc>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="52" y="54" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#172026">The result was not stable across time</text>
+  <text x="52" y="82" font-family="system-ui, sans-serif" font-size="14" fill="#5e6b73">Mean daily net return by frozen chronological fold, basis points per day</text>
+  <line x1="95" y1="225" x2="840" y2="225" stroke="#aeb9be" stroke-width="1.5"/>
+  <line x1="95" y1="125" x2="840" y2="125" stroke="#eef1f2"/>
+  <line x1="95" y1="325" x2="840" y2="325" stroke="#eef1f2"/>
+  <text x="62" y="130" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">+15</text>
+  <text x="72" y="230" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">0</text>
+  <text x="58" y="330" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">−15</text>
+  <rect x="145" y="165.8" width="120" height="59.2" rx="4" fill="#245d70"/>
+  <rect x="325" y="131.3" width="120" height="93.7" rx="4" fill="#245d70"/>
+  <rect x="505" y="225" width="120" height="95.1" rx="4" fill="#7d929a"/>
+  <rect x="685" y="131.6" width="120" height="93.4" rx="4" fill="#245d70"/>
+  <text x="205" y="154" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#172026">+8.89</text>
+  <text x="385" y="119" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#172026">+14.06</text>
+  <text x="565" y="344" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#172026">−14.27</text>
+  <text x="745" y="119" text-anchor="middle" font-family="system-ui, sans-serif" font-size="16" font-weight="700" fill="#172026">+14.00</text>
+  <text x="205" y="374" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#172026">Fold 1</text>
+  <text x="205" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">Sep–Nov 2025</text>
+  <text x="385" y="374" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#172026">Fold 2</text>
+  <text x="385" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">Dec–Feb</text>
+  <text x="565" y="374" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#172026">Fold 3</text>
+  <text x="565" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">Mar–May 2026</text>
+  <text x="745" y="374" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#172026">Fold 4</text>
+  <text x="745" y="395" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">Jun–Aug</text>
+  <text x="52" y="450" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">Source: preserved Research 005 EVALUATION.json</text>
+</svg>
