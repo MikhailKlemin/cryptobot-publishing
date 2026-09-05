@@ -24,6 +24,41 @@
     {{ end }}
   </div>
 
+  {{ with .Params.source_lineage }}
+  <aside class="source-lineage" aria-labelledby="source-lineage-title">
+    <p class="eyebrow">Source and lineage</p>
+    <h2 id="source-lineage-title">Where this strategy came from</h2>
+    <dl class="source-lineage-grid">
+      <dt>Origin</dt>
+      <dd>{{ .origin }}</dd>
+      <dt>Original source</dt>
+      <dd><a href="{{ .source_url | safeURL }}">{{ .source }} ↗</a></dd>
+      <dt>Frozen source commit</dt>
+      <dd><code>{{ .commit }}</code></dd>
+      <dt>Relationship to Research 005</dt>
+      <dd>{{ .relationship }}</dd>
+    </dl>
+  </aside>
+  {{ end }}
+
+  {{ with .Params.metric_guide }}
+  <section class="metric-guide" aria-labelledby="metric-guide-title">
+    <div class="metric-guide-head">
+      <p class="eyebrow">Reading the result</p>
+      <h2 id="metric-guide-title">How to read these numbers</h2>
+      <p>The headline metrics answer different questions. These short definitions are the interpretation used on this page, not additional evaluation criteria.</p>
+    </div>
+    <div class="metric-guide-grid">
+      {{ range . }}
+      <article class="metric-guide-item">
+        <h3>{{ .term }}</h3>
+        <p>{{ .explanation }}</p>
+      </article>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
   <article class="prose case-study-prose">
     {{ .Content }}
   </article>
