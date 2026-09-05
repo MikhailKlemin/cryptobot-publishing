@@ -28,13 +28,14 @@
           <span role="columnheader">What ended it</span>
         </div>
         {{ range .records }}
+        {{ $record := . }}
         <article class="research-table-row" role="row">
           <h3 role="cell">
-            {{ with .url }}<a class="research-case-link" href="{{ . | relURL }}">{{ $.case }}</a>{{ else }}{{ .case }}{{ end }}
+            {{ with $record.url }}<a class="research-case-link" href="{{ . | relURL }}">{{ $record.case }}</a>{{ else }}{{ $record.case }}{{ end }}
           </h3>
-          <p class="research-stage" role="cell">{{ .stage }}</p>
-          <p class="research-outcome" role="cell"><code>{{ .outcome }}</code></p>
-          <p class="research-ended" role="cell">{{ .ended }}</p>
+          <p class="research-stage" role="cell">{{ $record.stage }}</p>
+          <p class="research-outcome" role="cell"><code>{{ $record.outcome }}</code></p>
+          <p class="research-ended" role="cell">{{ $record.ended }}</p>
         </article>
         {{ end }}
       </div>
