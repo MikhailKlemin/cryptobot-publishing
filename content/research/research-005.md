@@ -56,6 +56,8 @@ criteria:
     result: "PASS"
   - label: "Maximum drawdown > −50%"
     result: "PASS"
+  - label: "All required deterministic metrics finite"
+    result: "PASS"
 charts:
   - src: "/images/research-005-gross-net.svg"
     alt: "Bar chart comparing Research 005 gross cumulative return of 28.39 percent with net cumulative return of 5.26 percent after the frozen turnover cost."
@@ -112,7 +114,7 @@ No post-result fee reduction was allowed.
 
 The terminal decision was not based on a single headline metric. `SURVIVED_RESEARCH` required every frozen criterion to pass.
 
-Four did. Two did not.
+Five did. Two did not.
 
 The net Sharpe ratio was about **0.368**, below the required **0.50**. More importantly, the one-sided 95% Bartlett-HAC lower bound on mean daily net return was **negative**. The HAC calculation used all 365 physical daily returns and a frozen 33-day lag, preserving temporal dependence rather than substituting an IID standard error after seeing the result.
 
