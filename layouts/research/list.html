@@ -29,7 +29,9 @@
         </div>
         {{ range .records }}
         <article class="research-table-row" role="row">
-          <h3 role="cell">{{ .case }}</h3>
+          <h3 role="cell">
+            {{ with .url }}<a class="research-case-link" href="{{ . | relURL }}">{{ $.case }}</a>{{ else }}{{ .case }}{{ end }}
+          </h3>
           <p class="research-stage" role="cell">{{ .stage }}</p>
           <p class="research-outcome" role="cell"><code>{{ .outcome }}</code></p>
           <p class="research-ended" role="cell">{{ .ended }}</p>
