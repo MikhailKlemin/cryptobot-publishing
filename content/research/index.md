@@ -41,6 +41,12 @@ groups:
         ended: "Annualized net return was +20.50%, but the complete frozen rule failed: Sharpe was about 0.368 versus 0.50 required, the one-sided 95% HAC lower bound was negative, only 3 of 4 folds were positive, and maximum drawdown was about −29.59%."
 ---
 
+## Detailed case study
+
+[Research 005: why a positive return still failed →](/research/research-005/)
+
+The final prospective experiment has enough preserved evidence to show the complete decision logic: the frozen executable strategy, capture contract, six survival criteria, cost impact, chronological folds, and the reasons the positive headline return did not survive the predeclared gate.
+
 ## How to read these outcomes
 
 `FALSIFIED` is reserved here for an empirical proposal that reached its frozen evaluation and failed the predeclared survival criteria. A pre-capture feasibility rejection or a data-admission failure is reported separately because no empirical strategy verdict was produced. `FULL_REPLICATION_MATCH` belongs to a different category again: it says the independent reproduction machinery matched the specified behavior, not that a trading strategy was profitable or deployable.
