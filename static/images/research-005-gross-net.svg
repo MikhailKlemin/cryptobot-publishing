@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" role="img" aria-labelledby="title desc">
+  <title id="title">Research 005 gross versus net cumulative return</title>
+  <desc id="desc">Gross cumulative return was 28.39 percent. Net cumulative return after the frozen turnover cost was 5.26 percent.</desc>
+  <rect width="820" height="430" fill="#ffffff"/>
+  <text x="52" y="54" font-family="system-ui, sans-serif" font-size="24" font-weight="700" fill="#172026">Cost changed the picture</text>
+  <text x="52" y="82" font-family="system-ui, sans-serif" font-size="14" fill="#5e6b73">Cumulative return over the frozen 365-day holdout</text>
+  <line x1="90" y1="350" x2="760" y2="350" stroke="#d9dfe3"/>
+  <line x1="90" y1="270" x2="760" y2="270" stroke="#eef1f2"/>
+  <line x1="90" y1="190" x2="760" y2="190" stroke="#eef1f2"/>
+  <line x1="90" y1="110" x2="760" y2="110" stroke="#eef1f2"/>
+  <text x="58" y="355" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">0%</text>
+  <text x="50" y="275" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">10%</text>
+  <text x="50" y="195" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">20%</text>
+  <text x="50" y="115" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">30%</text>
+  <rect x="180" y="122.9" width="190" height="227.1" rx="4" fill="#245d70"/>
+  <rect x="470" y="307.9" width="190" height="42.1" rx="4" fill="#7d929a"/>
+  <text x="275" y="112" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#172026">+28.39%</text>
+  <text x="565" y="297" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="700" fill="#172026">+5.26%</text>
+  <text x="275" y="382" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#172026">Gross</text>
+  <text x="565" y="382" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" font-weight="600" fill="#172026">Net after frozen cost</text>
+  <text x="52" y="416" font-family="system-ui, sans-serif" font-size="12" fill="#5e6b73">Source: preserved Research 005 EVALUATION.json</text>
+</svg>
