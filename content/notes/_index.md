@@ -1,8 +1,10 @@
 ---
 title: "Engineering notes"
-description: "Technical lessons from building and auditing controlled strategy-research machinery."
+description: "Technical lessons drawn from the preserved Cryptobot Research case studies and research machinery."
 intro: |-
-  These notes are about the parts of research that sit between an idea and a result: executable specifications, provenance, data contracts, deterministic evaluation, and the ways software can quietly change the question being tested.
+  The case studies show **what happened** in individual experiments. These notes pull out the engineering lessons that are easier to miss inside a result: executable specifications, provenance, data contracts, deterministic evaluation, and the ways software can quietly change the question being tested.
 
-  They are written from the preserved Cryptobot Research record. The underlying strategy discovery is closed; publishing a note does not reopen an experiment or create a new trading result.
+  Each note starts from a concrete preserved case and then generalizes only as far as the evidence supports. The first one grows directly out of [Benchmark 004](/research/benchmark-004/), where reproducing an external notebook exposed disagreements between its written description and the code that actually produced the result.
+
+  Strategy discovery is closed. These are explanations of completed work, not new experiments or trading signals.
 ---
