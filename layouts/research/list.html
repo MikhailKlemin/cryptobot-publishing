@@ -1,0 +1,50 @@
+{{ define "main" }}
+<section class="page-header research-page-header">
+  <div class="shell research-shell">
+    <p class="eyebrow">Cryptobot Research Notes</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="shell research-shell research-page-body">
+  <div class="prose research-intro">
+    {{ .Params.intro | markdownify }}
+  </div>
+
+  <div class="research-groups">
+    {{ range .Params.groups }}
+    <section class="research-group" aria-labelledby="{{ .title | anchorize }}">
+      <div class="research-group-heading">
+        <h2 id="{{ .title | anchorize }}">{{ .title }}</h2>
+        <p>{{ .note }}</p>
+      </div>
+
+      <div class="research-table" role="table" aria-label="{{ .title }} records">
+        <div class="research-table-head" role="row">
+          <span role="columnheader">Case</span>
+          <span role="columnheader">Stage</span>
+          <span role="columnheader">Outcome</span>
+          <span role="columnheader">What ended it</span>
+        </div>
+        {{ range .records }}
+        {{ $record := . }}
+        <article class="research-table-row" role="row">
+          <h3 role="cell">
+            {{ with $record.url }}<a class="research-case-link" href="{{ . | relURL }}">{{ $record.case }}</a>{{ else }}{{ $record.case }}{{ end }}
+          </h3>
+          <p class="research-stage" role="cell">{{ $record.stage }}</p>
+          <p class="research-outcome" role="cell"><code>{{ $record.outcome }}</code></p>
+          <p class="research-ended" role="cell">{{ $record.ended }}</p>
+        </article>
+        {{ end }}
+      </div>
+    </section>
+    {{ end }}
+  </div>
+
+  <article class="prose research-notes">
+    {{ .Content }}
+  </article>
+</section>
+{{ end }}

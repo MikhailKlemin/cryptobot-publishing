@@ -40,6 +40,7 @@ results:
     kind: "Prospective evaluation"
     title: "A positive headline return still failed"
     status: "FALSIFIED"
+    url: "/research/research-005/"
     body: "Research 005 was frozen in advance for 2025-09-01 through 2026-08-31, over a fixed 66-symbol universe and using the exact Benchmark 004 executable semantics. The annualized return looked encouraging. The complete acceptance rule did not pass, so the terminal classification stayed FALSIFIED."
     metrics:
       - label: "Annualized net return"

@@ -113,6 +113,10 @@
           <code>{{ $result.status }}</code>
         </div>
         {{ end }}
+
+        {{ with $result.url }}
+        <p class="result-more"><a class="text-link" href="{{ . | relURL }}">Read the detailed case study <span aria-hidden="true">→</span></a></p>
+        {{ end }}
       </article>
       {{ end }}
     </div>
