@@ -32,7 +32,7 @@
   color: var(--accent);
 }
 
-.note-card > p:not(.note-meta) {
+.note-card > p:not(.note-meta):not(.note-origin) {
   margin: 0 0 14px;
   color: var(--muted);
 }
@@ -44,6 +44,37 @@
   font-weight: 800;
   letter-spacing: .08em;
   text-transform: uppercase;
+}
+
+.note-origin {
+  margin: 0 0 13px;
+  color: var(--muted);
+  font-size: .86rem;
+}
+
+.note-origin a {
+  color: var(--text);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.note-origin a:hover {
+  color: var(--accent);
+}
+
+.note-lead p {
+  margin: 0;
+}
+
+.note-lead a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+.note-lead a:hover {
+  color: var(--accent);
 }
 
 .note-body {
