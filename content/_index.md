@@ -25,8 +25,8 @@ lanes:
   - label: "Engineering lessons"
     title: "What the research machinery taught us"
     body: "Reproducibility, market-data quality, immutable evidence, executable-vs-written specifications, and why research software should not quietly become a trading runtime."
-    url: "/methodology/#research-software-is-not-a-trading-runtime"
-    link: "See the current engineering boundary"
+    url: "/notes/"
+    link: "Read engineering notes"
 record_title: "Selected research outcomes"
 record_intro: "The project tested more than one candidate mechanism. A preserved checkpoint already recorded 16 completed empirical studies and 16 falsifications; other candidates stopped earlier at feasibility or data-admission gates. These examples show several ways a controlled research cycle can end."
 record:
