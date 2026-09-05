@@ -1,0 +1,52 @@
+{
+  "kind": "research_005_one_shot_prospective_extension",
+  "state": "FROZEN_AWAITING_LOCAL_PROVIDER_EXECUTION",
+  "project_authority": {
+    "discovery_reopened_for_this_experiment_only": true,
+    "automatic_reclose_after_terminal_result": true,
+    "external_ai_authorized": false,
+    "qualification_authorized": false,
+    "strategy_export_authorized": false,
+    "product_communication_authorized": false,
+    "paper_orders_authorized": false,
+    "live_orders_authorized": false
+  },
+  "parent_lineage": {
+    "external_source_commit": "fdb17c13b81ca007bac8ac59b55f14d9088d5a28",
+    "benchmark_004a_result_manifest_sha256": "6656b7ffddf37b95ca7c1e66a3ebe1f08783ab8f7e2e4d41eb427ea670c331a7",
+    "benchmark_004b_result_manifest_sha256": "e3e6e32eadf1c130b60bb13b2f1917b309c77214a574de253ae6f4fccbdc976a",
+    "benchmark_004b_capture_plan_sha256": "cc9908947aa607625044081abd0b40e023b5d49b641ce9e201412ca4be38f0ff",
+    "parent_official_canonical_ohlcv_sha256": "b5d5653c74526092d5334f33ee27c80efd8bd0ccbf7d86b6718e7077eaaa84a5"
+  },
+  "frozen_inputs": {
+    "universe_file": "parent/FROZEN_UNIVERSE.txt",
+    "universe_sha256": "e9d701a2cfcf2d09142c5ced525a62bf841ca97702163763459dcd8f5c87def0",
+    "universe_symbol_count": 66,
+    "pre_period_official_ohlcv_file": "parent/PRE_PERIOD_OFFICIAL_OHLCV.csv",
+    "pre_period_official_ohlcv_sha256": "b5d5653c74526092d5334f33ee27c80efd8bd0ccbf7d86b6718e7077eaaa84a5",
+    "pre_period_end_utc": "2025-08-31T00:00:00Z"
+  },
+  "protected_holdout": {
+    "first_daily_open_utc": "2025-09-01T00:00:00Z",
+    "last_daily_open_utc": "2026-08-31T00:00:00Z",
+    "physical_calendar_rows": 365
+  },
+  "future_provider_contract": {
+    "provider": "Binance Spot official public REST",
+    "base_url": "https://api.binance.com",
+    "endpoint": "/api/v3/klines",
+    "interval": "1d",
+    "timezone": "0",
+    "requests_per_symbol": 1,
+    "maximum_provider_requests": 66,
+    "automatic_retries": 0,
+    "credentials_required": false,
+    "alternate_provider_fallback": false,
+    "execution_gate": "--execute-provider-capture"
+  },
+  "terminal_outcomes": [
+    "SURVIVED_RESEARCH",
+    "FALSIFIED",
+    "INCONCLUSIVE"
+  ]
+}
