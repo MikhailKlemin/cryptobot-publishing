@@ -6,7 +6,7 @@
   <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
   <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
   <link rel="stylesheet" href="{{ "css/site.css" | relURL }}">
-  {{ if eq .Section "research" }}<link rel="stylesheet" href="{{ "css/research.css" | relURL }}">{{ end }}
+  <link rel="stylesheet" href="{{ "css/research.css" | relURL }}">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
