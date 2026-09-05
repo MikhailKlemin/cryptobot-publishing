@@ -9,8 +9,27 @@ intro: |-
   Trading ideas can look convincing after enough historical exploration. The harder part is finding out whether they still hold up once the rules are fixed **before** the result is known.
 
   That was the point of Cryptobot Research. Experiments were frozen prospectively, evaluated deterministically, and tied back to preserved data and execution provenance. Independent reproduction came before trust in novel results. When a frozen test failed, the failure stood. The research phase is now closed; what remains useful is the method and the evidence it left behind.
-results_title: "What the research established"
-results_intro: "Two closure tests ended differently. One showed that specified executable behavior could be reproduced independently. The other showed why a good-looking return is not enough to pass a frozen test."
+record_title: "Selected research outcomes"
+record_intro: "The project tested more than one candidate mechanism. A preserved checkpoint already recorded 16 completed empirical studies and 16 falsifications; other candidates stopped earlier at feasibility or data-admission gates. These examples show several ways a controlled research cycle can end."
+record:
+  - title: "Attention-shock cycle"
+    stage: "Real-data evaluation"
+    outcome: "FALSIFIED"
+    summary: "A bounded Binance cycle reached deterministic evaluation and terminated as falsified. The result was preserved rather than retuned after the outcome was known."
+  - title: "Reference-price anchor adjustment"
+    stage: "Deterministic evaluation"
+    outcome: "FALSIFIED"
+    summary: "A later frozen proposal failed its required return criteria and was registered as falsified rather than being passed forward for qualification."
+  - title: "Source-budget feasibility"
+    stage: "Pre-capture gate"
+    outcome: "REJECTED BEFORE CAPTURE"
+    summary: "One proposal required more history per symbol than its frozen request budget could supply. It stopped before any public-data capture or evaluation."
+  - title: "Coinbase history completeness"
+    stage: "Data admission"
+    outcome: "CLOSED BEFORE EVALUATION"
+    summary: "A real capture returned 4,995 rows per symbol against a prospectively frozen 5,000-row minimum. The shortfall was not filled or worked around after inspection."
+results_title: "Closure milestones"
+results_intro: "The final closure work ended with two different scientific outcomes: independent reproduction succeeded, while the final prospective strategy evaluation did not satisfy its complete frozen acceptance rule."
 results:
   - label: "Benchmark 004"
     kind: "Independent reproduction"
@@ -38,18 +57,25 @@ results:
 
 ## Why publish a failed experiment?
 
-A failed frozen test can tell you more than another attractive equity curve. Research 005 matters because the decision rule was not rewritten after the numbers arrived, even when one headline metric looked appealing.
+Because the failure contains more information than another optimized equity curve.
 
-The material here is aimed at readers interested in:
+Research 005 finished with a positive annualized net return. If that number had been treated as the objective, it would have been easy to call the result promising and continue tuning. But the acceptance criteria were frozen before the evaluation. They also required stronger risk-adjusted performance, a positive dependence-aware lower confidence bound, and recurring evidence across chronological folds. Those conditions were not all met.
 
-- prospective freezes as a practical guard against backtest overfitting;
-- deterministic evaluation and the role it plays in reproducibility;
-- provenance and immutable evidence as limits on retrospective storytelling;
-- what an independent reproduction test actually establishes;
-- the boundary between research software and a trading runtime.
+The important part is not that one strategy failed. It is that the procedure made it difficult to quietly redefine success after seeing the answer.
 
-## What this site is for
+## What remains useful
 
-The site will turn that record into a small set of readable case studies and technical notes. A reader should be able to inspect the method without knowing the development history of the project.
+The durable output of the project is a practical research workflow:
 
-The research result is not a trading product. No Research 005 strategy was authorized for promotion into a trading runtime.
+- bind data and transformations to explicit provenance;
+- freeze the strategy, costs, timing, and acceptance rule before evaluation;
+- make the evaluator deterministic enough to reproduce exactly;
+- test independent reproduction before trusting novel results;
+- preserve negative results instead of retuning them away;
+- keep research authority separate from any trading runtime.
+
+That workflow is useful even when the strategy under test is not.
+
+## What this site will cover
+
+The first pages focus on the parts worth carrying forward: the research record, prospective experiment design, deterministic evaluation, provenance, reproduction, realistic execution assumptions, and the failure modes that ordinary backtests make easy to hide. The goal is not to turn a closed experiment into a trading signal. It is to make the method understandable enough to inspect, criticize, and reuse.

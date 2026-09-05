@@ -171,6 +171,55 @@ h1 {
 }
 .side-note p:last-child { margin-bottom: 0; }
 
+.record-section {
+  padding: 72px 0 78px;
+  border-top: 1px solid var(--line);
+  background: var(--surface);
+}
+.record-list {
+  border-top: 1px solid var(--line);
+}
+.record-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(170px, 0.28fr);
+  gap: 48px;
+  padding: 25px 0 27px;
+  border-bottom: 1px solid var(--line);
+  align-items: start;
+}
+.record-stage {
+  margin: 0 0 5px;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 800;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.record-main h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+.record-main > p:last-child {
+  max-width: 760px;
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+.record-outcome {
+  justify-self: end;
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: var(--code);
+  color: var(--text);
+  font-size: 0.75rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: 0.04em;
+  text-align: right;
+}
+.record-more { margin: 28px 0 0; }
+
 .results-section {
   padding: 72px 0 78px;
   border-block: 1px solid var(--line);
@@ -368,6 +417,7 @@ h1 {
   .evidence-card { max-width: 540px; }
   .side-note { max-width: 540px; }
   .result-grid { grid-template-columns: 1fr; }
+  .record-row { grid-template-columns: minmax(0, 1fr) minmax(150px, 0.3fr); gap: 28px; }
 }
 
 @media (max-width: 620px) {
@@ -383,7 +433,9 @@ h1 {
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
   .evidence-card dl > div { grid-template-columns: 1fr; gap: 2px; }
   .evidence-card dd { text-align: left; }
-  .intro-grid, .results-section, .home-body { padding-top: 54px; padding-bottom: 58px; }
+  .intro-grid, .record-section, .results-section, .home-body { padding-top: 54px; padding-bottom: 58px; }
+  .record-row { grid-template-columns: 1fr; gap: 13px; }
+  .record-outcome { justify-self: start; text-align: left; }
   .result-card { padding: 21px; }
   .result-card-head { flex-direction: column-reverse; gap: 11px; }
   .metrics { grid-template-columns: 1fr; }
