@@ -10,7 +10,7 @@ intro: |-
 
   Cryptobot Research documents that process using preserved work from a completed research program. Strategy discovery is closed. The site is not a source of trading signals; it is a record of how hypotheses were reproduced, frozen, evaluated, rejected, or stopped before evaluation when the evidence contract could not be satisfied.
 lanes_title: "Three ways into the work"
-lanes_intro: "The publication is broader than one experiment. Research 005 is the most complete case today, while the same evidence base supports future case studies, methodological explanations, and engineering notes."
+lanes_intro: "The publication is broader than one experiment. Research 005 is the most complete falsification case today, while Benchmark 004 provides the corresponding reproduction case. The same evidence base also supports methodological explanations and engineering notes."
 lanes:
   - label: "Case studies"
     title: "What happened to actual research ideas"
@@ -53,6 +53,7 @@ results:
     kind: "Independent reproduction"
     title: "Reproduction worked"
     status: "FULL_REPLICATION_MATCH"
+    url: "/research/benchmark-004/"
     body: "Benchmark 004 independently reimplemented an external channel-breakout notebook and then reproduced it using independently captured official Binance data. The point was reproducibility, not an endorsement of the historical return."
   - label: "Research 005"
     kind: "Prospective evaluation"
