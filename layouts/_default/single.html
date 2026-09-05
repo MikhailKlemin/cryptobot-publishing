@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="page-header">
   <div class="shell narrow">
-    <p class="eyebrow">Cryptobot Research Notes</p>
+    <p class="eyebrow">{{ .Params.eyebrow | default "Cryptobot Research" }}</p>
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
   </div>
