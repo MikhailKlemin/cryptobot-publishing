@@ -1,0 +1,65 @@
+{
+  "all_daily_returns_finite": true,
+  "all_survival_criteria_satisfied": false,
+  "annualized_net_return": 0.20500798675700765,
+  "annualized_net_volatility": 0.5573360727415418,
+  "any_daily_return_le_minus_one": false,
+  "average_turnover": 0.27154153337636683,
+  "criteria": {
+    "all_required_metrics_finite": true,
+    "annualized_net_return_positive": true,
+    "at_least_3_of_4_positive_folds": true,
+    "exactly_365_rows": true,
+    "hac_one_sided_95_lower_bound_positive": false,
+    "max_drawdown_better_than_minus_0_50": true,
+    "net_sharpe_at_least_0_50": false
+  },
+  "folds": [
+    {
+      "end": "2025-11-30",
+      "mean_net_return": 0.0008886449401567116,
+      "name": "fold_1",
+      "positive": true,
+      "rows": 91,
+      "start": "2025-09-01"
+    },
+    {
+      "end": "2026-02-28",
+      "mean_net_return": 0.0014062885237440038,
+      "name": "fold_2",
+      "positive": true,
+      "rows": 90,
+      "start": "2025-12-01"
+    },
+    {
+      "end": "2026-05-31",
+      "mean_net_return": -0.0014267178944449188,
+      "name": "fold_3",
+      "positive": false,
+      "rows": 92,
+      "start": "2026-03-01"
+    },
+    {
+      "end": "2026-08-31",
+      "mean_net_return": 0.0014003627864643373,
+      "name": "fold_4",
+      "positive": true,
+      "rows": 92,
+      "start": "2026-06-01"
+    }
+  ],
+  "gross_cumulative_return": 0.28390069811311824,
+  "hac_lag": 33,
+  "hac_one_sided_95_lower_bound": -0.0010016019807964668,
+  "hac_standard_error": 0.0009503992770689706,
+  "holdout_end": "2026-08-31",
+  "holdout_start": "2025-09-01",
+  "kind": "research_005_evaluation",
+  "max_drawdown": -0.2958996939666908,
+  "max_drawdown_duration_days": 207,
+  "mean_daily_net_return": 0.0005616657171424867,
+  "net_cumulative_return": 0.05258496063130158,
+  "net_sharpe": 0.3678354888255685,
+  "positive_folds": 3,
+  "rows": 365
+}
