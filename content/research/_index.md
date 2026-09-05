@@ -40,7 +40,7 @@ groups:
         url: "/research/research-005/"
         stage: "Prospective evaluation"
         outcome: "FALSIFIED"
-        ended: "Annualized net return was +20.50%, but the complete frozen rule failed: Sharpe was about 0.368 versus 0.50 required, the one-sided 95% HAC lower bound was negative, only 3 of 4 folds were positive, and maximum drawdown was about −29.59%."
+        ended: "The frozen rule failed because net Sharpe was about 0.368 versus 0.50 required and the one-sided 95% HAC lower bound was negative. The 3-of-4 positive-fold criterion and the −50% drawdown boundary both passed."
 ---
 
 ## Detailed case studies
