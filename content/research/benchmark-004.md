@@ -9,6 +9,10 @@ period_label: "Reproduction data"
 period: "1 Jan 2021 – 31 Aug 2025"
 universe: "66 frozen Binance Spot symbols"
 provider: "Binance Spot official public REST"
+publication:
+  published: "5 Sep 2026"
+  updated: "5 Sep 2026"
+  evidence_state: "closed"
 source_lineage:
   origin: "External public research repository"
   source: "Statistical Arbitrage in Cryptocurrencies — Momentum / Channel Breakout"
@@ -45,6 +49,37 @@ criteria:
     result: "PASS"
   - label: "Published strategy display metrics match"
     result: "PASS"
+evidence_note: "These six files are byte-for-byte text artifacts selected from the preserved Benchmark 004B terminal bundle. The upstream notebook and archived market dataset are not redistributed here. Raw provider payloads, binaries, and runner material are also omitted."
+evidence_files:
+  - label: "Terminal result"
+    description: "Benchmark 004B terminal outcome and action counters."
+    url: "/evidence/benchmark-004/benchmark004b_result.json"
+    sha256: "98f968533312722e705fdf8441d2df40ad84614f1d44785610f6c6b72745f635"
+  - label: "Independent input comparison"
+    description: "Field-cell comparison and canonical input hashes."
+    url: "/evidence/benchmark-004/INPUT_COMPARISON.json"
+    sha256: "263e0652a7197ceea7be26f183a78fdb234f179da3ec563eea5379626c05d9e9"
+  - label: "Reproduced evaluation"
+    description: "Benchmark 004A strategy parameters and matched historical display metrics."
+    url: "/evidence/benchmark-004/benchmark004b_evaluation.json"
+    sha256: "f036a3631231ace778195203064d190b4562618fab186c7296535816ef34fdb2"
+  - label: "Frozen executable specification"
+    description: "The code-level semantics the independent implementation was required to reproduce."
+    url: "/evidence/benchmark-004/FROZEN_EXECUTABLE_SPEC.md"
+    sha256: "4ce2e6571b1ca1241798966bcf45500eb8875dacb614a6c39779984fc6f9442e"
+  - label: "Frozen decision specification"
+    description: "The exact-match rules and possible terminal outcomes frozen before provider execution."
+    url: "/evidence/benchmark-004/DECISION_SPEC.md"
+    sha256: "fbcc7fc0762f287bc1e87ba884a319728cc67a92b0573f91788a3634c16c8853"
+  - label: "Predeclared audit findings"
+    description: "Methodology and documentation issues recorded before the reproduction result was known."
+    url: "/evidence/benchmark-004/PREDECLARED_AUDIT_FINDINGS.md"
+    sha256: "622c37e4d04dfc875d836af96d9e91aca24a470b5f5a73dae1a3f418a3932a49"
+lineage_nav:
+  - direction: "Next in lineage"
+    title: "Research 005 — prospective evaluation"
+    note: "The reproduced executable strategy was frozen into a new 365-day holdout."
+    url: "/research/research-005/"
 ---
 
 ## What Benchmark 004 was trying to establish
@@ -133,4 +168,4 @@ The latter question required a new, prospectively frozen experiment. That became
 
 This page is derived from the preserved `benchmark-004b-result-20260905T085552Z` terminal bundle. Its SHA-256 manifest contains 154 listed files, all of which were checked against the uploaded archive before publication and matched.
 
-The public page does not redistribute the upstream notebook or archived dataset. The original notebook is linked at its frozen public commit, while the reproduction claims here are based on the preserved Benchmark 004 result, decision specification, executable specification, capture receipt, input comparison and terminal evaluation.
+The selected artifacts below are published so that readers can inspect the terminal result, input comparison, evaluation, executable specification, decision rule, and predeclared audit findings directly. The public page does not redistribute the upstream notebook or archived dataset; the original notebook remains linked at its frozen public commit.

@@ -45,7 +45,7 @@ Authoritative uploaded bundle inspected for this publishing iteration:
 - The exact sealed Benchmark 004A evaluator binary was reused without rebuild against the independently captured canonical input.
 - Benchmark 004A reproduced the source notebook's published display metrics; these are historical reproduction targets, not proof of future profitability or live executability.
 
-Public source link currently used on Research 005 should point to the exact channel-breakout notebook at the frozen commit rather than the moving default branch.
+The public source link points to the exact channel-breakout notebook at the frozen source commit rather than the moving default branch.
 
 ## Research 005 detailed case study
 
@@ -61,6 +61,27 @@ Authoritative terminal bundle inspected for the detailed public page:
 - `RESEARCH_005_EXPERIMENT.json` freezes a 66-symbol universe and protected holdout 2025-09-01 through 2026-08-31 with official Binance Spot public REST, maximum 66 requests, zero automatic retries, no credentials, and no alternate-provider fallback.
 - `CAPTURE_RECEIPT.json` records 66/66 successful provider requests with zero retries and complete capture. 65 symbol responses contain 365 klines; `OMUSDT` contains 183. The frozen strategy/capture semantics already permit legitimate venue-bar absence as missing data, so this should not be described as an ad-hoc repair or post-hoc universe change.
 - The public charts `research-005-gross-net.svg` and `research-005-fold-means.svg` are editorial renderings of values already present in `EVALUATION.json`; they are not a replay, optimization, or new empirical evaluation.
+
+## Published evidence excerpts
+
+PR #4 publishes only selected text artifacts with a direct explanatory benefit. Each public file was compared byte-for-byte with the corresponding artifact in the uploaded preserved bundle using Git blob identity before opening the PR; the listed SHA-256 value on the case-study page is the source bundle's manifest hash.
+
+Benchmark 004 public excerpts:
+
+- `static/evidence/benchmark-004/benchmark004b_result.json`
+- `static/evidence/benchmark-004/INPUT_COMPARISON.json`
+- `static/evidence/benchmark-004/benchmark004b_evaluation.json`
+- `static/evidence/benchmark-004/FROZEN_EXECUTABLE_SPEC.md`
+- `static/evidence/benchmark-004/DECISION_SPEC.md`
+- `static/evidence/benchmark-004/PREDECLARED_AUDIT_FINDINGS.md`
+
+Research 005 public excerpts:
+
+- `static/evidence/research-005/RESEARCH_005_RESULT.json`
+- `static/evidence/research-005/EVALUATION.json`
+- `static/evidence/research-005/FROZEN_STRATEGY_SPEC.md`
+- `static/evidence/research-005/FROZEN_DECISION_SPEC.md`
+- `static/evidence/research-005/RESEARCH_005_EXPERIMENT.json`
 
 ## Editorial limitations
 

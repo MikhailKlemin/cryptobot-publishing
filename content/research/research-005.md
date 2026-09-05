@@ -8,6 +8,10 @@ status: "FALSIFIED"
 period: "1 Sep 2025 – 31 Aug 2026"
 universe: "66 frozen Binance Spot symbols"
 provider: "Binance Spot official public REST"
+publication:
+  published: "5 Sep 2026"
+  updated: "5 Sep 2026"
+  evidence_state: "closed"
 source_lineage:
   origin: "External public research repository"
   source: "Statistical Arbitrage in Cryptocurrencies — Momentum / Channel Breakout"
@@ -65,6 +69,33 @@ charts:
   - src: "/images/research-005-fold-means.svg"
     alt: "Bar chart of mean daily net return by four frozen chronological folds: positive in folds one, two and four, negative in fold three."
     caption: "Mean daily net return in the four chronological folds, shown in basis points per day. Three folds were positive; the third was not."
+evidence_note: "These five files are byte-for-byte text artifacts selected from the preserved Research 005 terminal bundle. They expose the frozen experiment and strategy, the decision rule, the deterministic evaluation, and the terminal verdict without publishing raw market payloads, binaries, private paths, or unrelated runner material."
+evidence_files:
+  - label: "Terminal result"
+    description: "Terminal outcome, failure reasons, action counters, and embedded evaluation summary."
+    url: "/evidence/research-005/RESEARCH_005_RESULT.json"
+    sha256: "c3d88fd9a9dee10b9fe4c08c9f826c7e2269f4ea54e396b1c5776e36204b0dfa"
+  - label: "Deterministic evaluation"
+    description: "The 365-day metrics, chronological folds, criterion booleans, HAC result, and drawdown."
+    url: "/evidence/research-005/EVALUATION.json"
+    sha256: "83dab48e7cf7684feaf43c8245d5f6381e4ea89d7f005f1b6b085534e09b33e6"
+  - label: "Frozen strategy specification"
+    description: "The exact reproduced executable semantics carried into the protected holdout."
+    url: "/evidence/research-005/FROZEN_STRATEGY_SPEC.md"
+    sha256: "562908e8ba433d66f136299ef45594ab3b3b9d113b49f559ea91422656692121"
+  - label: "Frozen decision specification"
+    description: "The deterministic metrics, seven survival criteria, and no-rescue rule fixed before evaluation."
+    url: "/evidence/research-005/FROZEN_DECISION_SPEC.md"
+    sha256: "c3c51fb05eba1872e4d8c02adacc65758a262e06d9a3dbf75b36734f3af3f3f2"
+  - label: "Frozen experiment definition"
+    description: "The parent lineage, 66-symbol universe, protected dates, provider contract, and authority boundaries."
+    url: "/evidence/research-005/RESEARCH_005_EXPERIMENT.json"
+    sha256: "799ffd35820836fd6877bddfe962c5a07b87aa397ecd58cf4443d949d87e4e11"
+lineage_nav:
+  - direction: "Previous in lineage"
+    title: "Benchmark 004 — independent reproduction"
+    note: "See how the executable strategy and official-data panel were reproduced before this holdout was opened."
+    url: "/research/benchmark-004/"
 ---
 
 ## The result in one sentence
@@ -144,4 +175,4 @@ No strategy was authorized for promotion into the separate trading runtime.
 
 This page is derived from the preserved Research 005 terminal bundle rather than a fresh replay. The source bundle contains the terminal result, deterministic evaluation, capture receipt, frozen strategy and decision specifications, runner/build identities, raw provider responses and SHA-256 manifests.
 
-For publication, the detailed raw market payloads are not reproduced here. The two charts use only metrics already recorded in the terminal evaluation. Nothing on this page retunes or re-evaluates the strategy.
+For publication, the detailed raw market payloads are not reproduced here. The selected text artifacts below expose the frozen experiment, strategy, decision rule, evaluation, and terminal outcome directly. The two charts use only metrics already recorded in the terminal evaluation. Nothing on this page retunes or re-evaluates the strategy.

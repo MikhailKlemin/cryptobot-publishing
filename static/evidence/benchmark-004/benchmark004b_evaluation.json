@@ -1,0 +1,81 @@
+{
+  "benchmark": "Benchmark 004A - external channel-breakout archived-input reproduction",
+  "source_commit": "fdb17c13b81ca007bac8ac59b55f14d9088d5a28",
+  "source_mode": "third-party commit-pinned archived pickle; strategy independently reimplemented in Go",
+  "strategy": {
+    "long_entry_lookback": 46,
+    "short_entry_lookback": 35,
+    "max_holding_age": 33,
+    "long_exit_lookback": 2,
+    "short_exit_lookback": 40,
+    "volume_lookback": 50,
+    "volume_quantile": 0.68,
+    "risk_std_lookback": 35,
+    "transaction_cost_bps": 20,
+    "out_of_sample_start": "2024-01-01"
+  },
+  "dataset": {
+    "rows": 1704,
+    "symbols": 66,
+    "start": "2021-01-01",
+    "end": "2025-08-31"
+  },
+  "average_turnover": 0.24597953334294312,
+  "implied_holding_period_days": 8.130757761913518,
+  "gross": {
+    "cumulative_return": 4.243539306513855,
+    "annualized_return": 1.295007582157865,
+    "annualized_volatility": 0.7771322383177176,
+    "sharpe": 1.6663928200446405,
+    "max_drawdown": -0.3916441463746174,
+    "max_drawdown_duration_days": 144,
+    "win_rate": 0.5281456953642384,
+    "info_ratio": 1.952348307039767
+  },
+  "net": {
+    "cumulative_return": 2.8733783680275633,
+    "annualized_return": 1.1154425228175167,
+    "annualized_volatility": 0.7797967498462016,
+    "sharpe": 1.4304272530470459,
+    "max_drawdown": -0.43070843041621487,
+    "max_drawdown_duration_days": 162,
+    "win_rate": 0.5238879736408567,
+    "info_ratio": 1.7079329513836847
+  },
+  "btc_hodl": {
+    "cumulative_return": 1.5600091099192688,
+    "annualized_return": 0.6847233815904227,
+    "annualized_volatility": 0.49412579733440015,
+    "sharpe": 1.3857268438203711,
+    "max_drawdown": -0.28095276766937516,
+    "max_drawdown_duration_days": 237,
+    "win_rate": 0.5172413793103449
+  },
+  "published_display_metrics_match": true,
+  "checks": [
+    "PASS gross cumulative return = 424.35%",
+    "PASS net cumulative return = 287.34%",
+    "PASS BTC cumulative return = 156.00%",
+    "PASS gross annualized return = 129.50%",
+    "PASS net annualized return = 111.54%",
+    "PASS BTC annualized return = 68.47%",
+    "PASS gross annualized volatility = 77.71%",
+    "PASS net annualized volatility = 77.98%",
+    "PASS BTC annualized volatility = 49.41%",
+    "PASS gross Sharpe = 1.666393",
+    "PASS net Sharpe = 1.430427",
+    "PASS BTC Sharpe = 1.385727",
+    "PASS gross max drawdown = -39.16%",
+    "PASS net max drawdown = -43.07%",
+    "PASS BTC max drawdown = -28.10%",
+    "PASS gross max drawdown duration = 144",
+    "PASS net max drawdown duration = 162",
+    "PASS BTC max drawdown duration = 237",
+    "PASS gross win rate = 52.81%",
+    "PASS net win rate = 52.39%",
+    "PASS BTC win rate = 51.72%",
+    "PASS gross info ratio = 1.952348",
+    "PASS net info ratio = 1.707933",
+    "PASS average turnover = 0.24597953334294312"
+  ]
+}

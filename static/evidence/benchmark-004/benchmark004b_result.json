@@ -1,0 +1,17 @@
+{
+  "benchmark": "Benchmark 004B - independent official Binance data reproduction",
+  "outcome": "FULL_REPLICATION_MATCH",
+  "parent_004a_result_manifest_sha256": "6656b7ffddf37b95ca7c1e66a3ebe1f08783ab8f7e2e4d41eb427ea670c331a7",
+  "capture_plan_sha256": "cc9908947aa607625044081abd0b40e023b5d49b641ce9e201412ca4be38f0ff",
+  "provider": "Binance Spot official public REST",
+  "provider_request_max": 132,
+  "provider_requests_executed": 132,
+  "evaluator_invocations": 1,
+  "external_ai_calls": 0,
+  "protected_reads": 0,
+  "qualification_actions": 0,
+  "strategy_export_actions": 0,
+  "product_communications": 0,
+  "paper_orders": 0,
+  "live_orders": 0
+}
