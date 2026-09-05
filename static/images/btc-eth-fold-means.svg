@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 470" role="img" aria-labelledby="title desc">
+  <title id="title">Net mean return across four frozen chronological folds</title>
+  <desc id="desc">All four chronological folds had negative mean net returns: negative 22.15, negative 10.84, negative 9.80, and negative 21.46 basis points.</desc>
+  <rect width="900" height="470" fill="#ffffff"/>
+  <text x="54" y="52" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#172026">The negative result recurred across time</text>
+  <text x="54" y="82" font-family="system-ui, sans-serif" font-size="15" fill="#5e6b73">Mean net log return in each prospectively frozen chronological fold</text>
+  <line x1="110" y1="138" x2="840" y2="138" stroke="#aeb9bf" stroke-width="1.5"/>
+  <text x="60" y="143" font-family="system-ui, sans-serif" font-size="13" fill="#5e6b73">0 bps</text>
+  <rect x="145" y="138" width="110" height="244" rx="5" fill="#d9dfe3"/>
+  <rect x="330" y="138" width="110" height="119" rx="5" fill="#d9dfe3"/>
+  <rect x="515" y="138" width="110" height="108" rx="5" fill="#d9dfe3"/>
+  <rect x="700" y="138" width="110" height="236" rx="5" fill="#d9dfe3"/>
+  <g font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#172026" text-anchor="middle">
+    <text x="200" y="371">−22.15</text>
+    <text x="385" y="246">−10.84</text>
+    <text x="570" y="235">−9.80</text>
+    <text x="755" y="363">−21.46</text>
+  </g>
+  <g font-family="system-ui, sans-serif" font-size="14" fill="#5e6b73" text-anchor="middle">
+    <text x="200" y="420">Fold 1</text><text x="200" y="441">31 trades</text>
+    <text x="385" y="420">Fold 2</text><text x="385" y="441">61 trades</text>
+    <text x="570" y="420">Fold 3</text><text x="570" y="441">52 trades</text>
+    <text x="755" y="420">Fold 4</text><text x="755" y="441">60 trades</text>
+  </g>
+</svg>
