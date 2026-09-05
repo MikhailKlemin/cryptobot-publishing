@@ -8,6 +8,25 @@ status: "FALSIFIED"
 period: "1 Sep 2025 – 31 Aug 2026"
 universe: "66 frozen Binance Spot symbols"
 provider: "Binance Spot official public REST"
+source_lineage:
+  origin: "External public research repository"
+  source: "Statistical Arbitrage in Cryptocurrencies — Momentum / Channel Breakout"
+  source_url: "https://github.com/gm-clara/Stat-Arb-in-Crypto/blob/fdb17c13b81ca007bac8ac59b55f14d9088d5a28/Momentum/Momentum%20-%20Channel%20Breakout.ipynb"
+  commit: "fdb17c13b81ca007bac8ac59b55f14d9088d5a28"
+  relationship: "Benchmark 004 independently reimplemented the executed notebook behavior in Go. Benchmark 004B then recaptured the frozen 66-symbol panel from official Binance data and matched the archived canonical input exactly. Research 005 carried those reproduced executable semantics into a new prospective holdout."
+metric_guide:
+  - term: "Net cumulative return"
+    explanation: "The compounded change in portfolio value over the actual holdout after the frozen transaction-cost model. +5.26% means 100 units of starting capital end at about 105.26 under the evaluator's assumptions."
+  - term: "Annualized net return"
+    explanation: "Here this is an arithmetic annualization: mean daily net return multiplied by 365. It is a standardized rate, not the amount the portfolio actually gained during the year."
+  - term: "Net Sharpe"
+    explanation: "Return relative to volatility after costs. Higher values mean more return per unit of observed variability. The frozen rule required at least 0.50; Research 005 recorded 0.368."
+  - term: "Maximum drawdown"
+    explanation: "The largest peak-to-trough decline in portfolio value during the holdout. −29.59% means the worst fall from a previous equity high was almost thirty percent."
+  - term: "Positive folds"
+    explanation: "The holdout was split into four consecutive time blocks to check whether positive mean returns recurred through time. Three were positive and one was negative."
+  - term: "HAC lower bound"
+    explanation: "A conservative lower confidence bound on mean daily return that allows for changing volatility and serial dependence. Because the one-sided 95% lower bound was below zero, the required evidence for a positive mean return was not established."
 metrics:
   - label: "Net cumulative return"
     value: "+5.26%"
@@ -36,6 +55,8 @@ criteria:
   - label: "At least 3 of 4 positive folds"
     result: "PASS"
   - label: "Maximum drawdown > −50%"
+    result: "PASS"
+  - label: "All required deterministic metrics finite"
     result: "PASS"
 charts:
   - src: "/images/research-005-gross-net.svg"
@@ -69,6 +90,8 @@ The strategy was not a generic description of "breakout trading." Its executable
 
 Some of those choices are unconventional. That was deliberate. Research 005 was testing the already reproduced executable object, not improving it after the fact.
 
+Benchmark 004 also found several places where the external notebook's explanatory prose and executed code did not fully agree. The reproduction followed the executed code and documented those discrepancies before the later prospective test. That distinction matters: a reproducible strategy has to be defined by executable behavior, not by whichever description looks cleaner afterward.
+
 ## The capture was prospective too
 
 The provider contract allowed exactly one official Binance daily-kline request for each of the 66 frozen symbols, with no automatic retries and no alternate-provider fallback. The later runner executed 66 requests and recorded the capture as complete.
@@ -91,7 +114,7 @@ No post-result fee reduction was allowed.
 
 The terminal decision was not based on a single headline metric. `SURVIVED_RESEARCH` required every frozen criterion to pass.
 
-Four did. Two did not.
+Five did. Two did not.
 
 The net Sharpe ratio was about **0.368**, below the required **0.50**. More importantly, the one-sided 95% Bartlett-HAC lower bound on mean daily net return was **negative**. The HAC calculation used all 365 physical daily returns and a frozen 33-day lag, preserving temporal dependence rather than substituting an IID standard error after seeing the result.
 
