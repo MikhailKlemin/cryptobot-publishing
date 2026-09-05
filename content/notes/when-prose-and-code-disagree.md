@@ -1,19 +1,20 @@
 ---
 title: "When the prose and the code disagree"
-description: "A reproduction problem from Benchmark 004: what should count as the strategy when comments, documentation, and executed notebook behavior do not line up?"
-eyebrow: "Reproducibility"
+description: "What should count as the strategy when comments, documentation, and executed notebook behavior do not line up?"
+lead: "A reproduction problem surfaced by [Benchmark 004](/research/benchmark-004/): what should count as the strategy when comments, documentation, and executed notebook behavior do not line up?"
+eyebrow: "Engineering lesson from Benchmark 004"
 summary: "Benchmark 004 reproduced an external channel-breakout notebook exactly enough to expose a harder question: when the written explanation and the executed program differ, which object are you actually testing?"
 date: 2026-09-05
 lastmod: 2026-09-05
 source_case: "/research/benchmark-004/"
-source_label: "Benchmark 004 reproduction case study"
+source_label: "Benchmark 004 — independent reproduction"
 ---
 
 Reproducing a trading strategy sounds straightforward until the source contains more than one version of the strategy.
 
 A paper, README or notebook narrative may describe one rule. A nearby comment may describe a slightly different parameter. The code that actually produced the displayed result may do something else again. At that point, “reproduce the strategy” stops being a purely numerical task. You first have to decide **what the object of reproduction is**.
 
-Benchmark 004 ran into exactly this problem while reproducing the public *Statistical Arbitrage in Cryptocurrencies* channel-breakout notebook. The source was pinned to a specific Git commit before reproduction. The audit then recorded disagreements between the explanatory text and the executed notebook path **before** the independent result was known.
+[Benchmark 004](/research/benchmark-004/) ran into exactly this problem while reproducing the public *Statistical Arbitrage in Cryptocurrencies* channel-breakout notebook. The source was pinned to a specific Git commit before reproduction. The audit then recorded disagreements between the explanatory text and the executed notebook path **before** the independent result was known.
 
 That ordering mattered. A successful numerical match was not allowed to make the discrepancies disappear.
 
@@ -103,7 +104,7 @@ Benchmark 004 ended with `FULL_REPLICATION_MATCH`. The executable behavior and t
 
 That success still did not answer the question that mattered for future evidence: would the same frozen executable behavior survive a new period that had not been used to produce the historical result?
 
-Research 005 took that next step. It carried the reproduced semantics into a new prospectively frozen 365-day holdout. The result was positive on some headline measures, but it failed two predeclared acceptance criteria and finished `FALSIFIED`.
+[Research 005](/research/research-005/) took that next step. It carried the reproduced semantics into a new prospectively frozen 365-day holdout. The result was positive on some headline measures, but it failed two predeclared acceptance criteria and finished `FALSIFIED`.
 
 That sequence is useful precisely because the two verdicts are not contradictory:
 
