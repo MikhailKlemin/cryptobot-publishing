@@ -4,6 +4,13 @@
     <p class="eyebrow">{{ .Params.eyebrow }}</p>
     <h1>{{ .Title }}</h1>
     <p class="page-description">{{ .Params.summary }}</p>
+    {{ with .Params.publication }}
+    <div class="publication-meta" aria-label="Publication metadata">
+      <span>Published {{ .published }}</span>
+      <span>Updated {{ .updated }}</span>
+      <span>Evidence state: {{ .evidence_state }}</span>
+    </div>
+    {{ end }}
     <div class="case-study-meta" aria-label="Case study summary">
       <div><span>Terminal result</span><strong><code>{{ .Params.status }}</code></strong></div>
       <div><span>{{ with .Params.period_label }}{{ . }}{{ else }}Protected period{{ end }}</span><strong>{{ .Params.period }}</strong></div>
@@ -90,6 +97,42 @@
     </figure>
     {{ end }}
   </div>
+  {{ end }}
+
+  {{ with .Params.evidence_files }}
+  <section class="evidence-files" aria-labelledby="evidence-files-title">
+    <div class="evidence-files-heading">
+      <p class="eyebrow">Inspect the evidence</p>
+      <h2 id="evidence-files-title">Selected preserved artifacts</h2>
+      <p>{{ $.Params.evidence_note | default "These are selected text artifacts copied from the preserved terminal evidence. Raw market payloads, binaries, private paths, and unrelated runner material are intentionally not published." }}</p>
+    </div>
+    <div class="evidence-file-list">
+      {{ range . }}
+      <a class="evidence-file-row" href="{{ .url | relURL }}">
+        <span class="evidence-file-copy">
+          <strong>{{ .label }}</strong>
+          <small>{{ .description }}</small>
+        </span>
+        <span class="evidence-file-hash">
+          <small>SHA-256</small>
+          <code>{{ .sha256 }}</code>
+        </span>
+      </a>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{ with .Params.lineage_nav }}
+  <nav class="case-lineage-nav" aria-label="Case study lineage">
+    {{ range . }}
+    <a class="case-lineage-link" href="{{ .url | relURL }}">
+      <span>{{ .direction }}</span>
+      <strong>{{ .title }}</strong>
+      {{ with .note }}<small>{{ . }}</small>{{ end }}
+    </a>
+    {{ end }}
+  </nav>
   {{ end }}
 
   <nav class="case-study-back" aria-label="Research navigation">
