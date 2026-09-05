@@ -91,6 +91,18 @@
 }
 
 @media (max-width: 620px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .nav {
+    gap: 9px;
+  }
+
+  .nav a {
+    font-size: .84rem;
+  }
+
   .notes-page-body,
   .note-body {
     padding-top: 42px;
