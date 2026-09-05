@@ -1,0 +1,102 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="shell hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ .Params.eyebrow }}</p>
+      <h1>{{ .Params.headline }}</h1>
+      <p class="hero-summary">{{ .Params.summary }}</p>
+      <div class="hero-actions">
+        <a class="button" href="{{ "methodology/" | relURL }}">Read the methodology</a>
+        <a class="text-link" href="#results">See the closure results <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+    <aside class="evidence-card" aria-label="Research status">
+      <p class="card-label">Research status</p>
+      <dl>
+        <div>
+          <dt>Discovery</dt>
+          <dd>Closed</dd>
+        </div>
+        <div>
+          <dt>Benchmark 004</dt>
+          <dd>Full replication match</dd>
+        </div>
+        <div>
+          <dt>Research 005</dt>
+          <dd>Falsified</dd>
+        </div>
+        <div>
+          <dt>Trading promotion</dt>
+          <dd>None authorized</dd>
+        </div>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<section class="shell intro-grid" aria-labelledby="about-title">
+  <article class="prose intro-copy">
+    <h2 id="about-title">{{ .Params.intro_title }}</h2>
+    {{ .Params.intro | markdownify }}
+  </article>
+  <aside class="side-note">
+    <p class="card-label">Editorial rule</p>
+    <p>Verified fact, interpretation, explanation, and speculation are kept distinct. Missing evidence is not filled with a better story.</p>
+  </aside>
+</section>
+
+<section class="results-section" id="results" aria-labelledby="results-title">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">Closure evidence</p>
+      <h2 id="results-title">{{ .Params.results_title }}</h2>
+      <p>{{ .Params.results_intro }}</p>
+    </div>
+
+    <div class="result-grid">
+      {{ range $index, $result := .Params.results }}
+      <article class="result-card{{ if $result.metrics }} result-card-featured{{ end }}">
+        <div class="result-card-head">
+          <div>
+            <p class="result-kind">{{ $result.kind }}</p>
+            <h3>{{ $result.title }}</h3>
+          </div>
+          <span class="result-id">{{ $result.label }}</span>
+        </div>
+
+        <p class="result-body">{{ $result.body }}</p>
+
+        {{ with $result.metrics }}
+        <dl class="metrics" aria-label="Research 005 reported metrics">
+          {{ range . }}
+          <div class="metric">
+            <dt>{{ .label }}</dt>
+            <dd>
+              <strong>{{ .value }}</strong>
+              {{ with .note }}<span>{{ . }}</span>{{ end }}
+            </dd>
+          </div>
+          {{ end }}
+          <div class="metric metric-terminal">
+            <dt>Terminal result</dt>
+            <dd><code>{{ $result.status }}</code></dd>
+          </div>
+        </dl>
+        {{ else }}
+        <div class="result-status">
+          <span>Terminal result</span>
+          <code>{{ $result.status }}</code>
+        </div>
+        {{ end }}
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="shell home-body">
+  <article class="prose narrow">
+    {{ .Content }}
+  </article>
+</section>
+{{ end }}

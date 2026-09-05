@@ -1,0 +1,18 @@
+title = "Cryptobot Research"
+locale = "en-US"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  description = "Controlled crypto strategy research: reproducibility, prospective evaluation, provenance, and falsification."
+  author = "Cryptobot Research"
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    pageRef = "/"
+    weight = 10
+  [[menu.main]]
+    name = "Methodology"
+    pageRef = "/methodology"
+    weight = 20
