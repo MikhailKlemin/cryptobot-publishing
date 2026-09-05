@@ -1,0 +1,30 @@
+{{ define "main" }}
+<section class="page-header notes-page-header">
+  <div class="shell narrow">
+    <p class="eyebrow">Cryptobot Research Notes</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="shell narrow notes-page-body">
+  <div class="prose notes-intro">
+    {{ .Params.intro | markdownify }}
+  </div>
+
+  <div class="notes-list">
+    {{ range .Pages.ByDate.Reverse }}
+    {{ $note := . }}
+    <article class="note-card">
+      <p class="note-meta">{{ .Date.Format "2 Jan 2006" }} · Engineering note</p>
+      <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      {{ with .Params.summary }}<p>{{ . }}</p>{{ else }}{{ with .Description }}<p>{{ . }}</p>{{ end }}{{ end }}
+      {{ with .Params.source_case }}
+      <p class="note-origin">Worked example: <a href="{{ . | relURL }}">{{ $note.Params.source_label | default "source case study" }}</a></p>
+      {{ end }}
+      <a class="text-link" href="{{ .RelPermalink }}">Read the note <span aria-hidden="true">→</span></a>
+    </article>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

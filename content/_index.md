@@ -10,7 +10,7 @@ intro: |-
 
   Cryptobot Research documents that process using preserved work from a completed research program. Strategy discovery is closed. The site is not a source of trading signals; it is a record of how hypotheses were reproduced, frozen, evaluated, rejected, or stopped before evaluation when the evidence contract could not be satisfied.
 lanes_title: "Three ways into the work"
-lanes_intro: "The publication is broader than one experiment. Research 005 is the most complete falsification case today, while Benchmark 004 provides the corresponding reproduction case. The same evidence base also supports methodological explanations and engineering notes."
+lanes_intro: "The publication is broader than one experiment. Research 005 is the most complete falsification case today, while Benchmark 004 provides the corresponding reproduction case. Methodology explains the controls; engineering notes pull reusable lessons out of those concrete cases."
 lanes:
   - label: "Case studies"
     title: "What happened to actual research ideas"
@@ -23,10 +23,10 @@ lanes:
     url: "/methodology/"
     link: "Read the methodology"
   - label: "Engineering lessons"
-    title: "What the research machinery taught us"
-    body: "Reproducibility, market-data quality, immutable evidence, executable-vs-written specifications, and why research software should not quietly become a trading runtime."
-    url: "/methodology/#research-software-is-not-a-trading-runtime"
-    link: "See the current engineering boundary"
+    title: "What the cases teach beyond their verdicts"
+    body: "Technical notes start from a preserved research case, then pull out a broader lesson about reproducibility, data quality, executable specifications, provenance, or research software boundaries."
+    url: "/notes/"
+    link: "Read engineering notes"
 record_title: "Selected research outcomes"
 record_intro: "The project tested more than one candidate mechanism. A preserved checkpoint already recorded 16 completed empirical studies and 16 falsifications; other candidates stopped earlier at feasibility or data-admission gates. These examples show several ways a controlled research cycle can end."
 record:
