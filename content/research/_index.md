@@ -36,6 +36,7 @@ groups:
         outcome: "FULL_REPLICATION_MATCH"
         ended: "Independent research machinery reproduced the externally specified executable behavior against official public data. This established reproducibility, not profitability."
       - case: "Research 005 — final prospective evaluation"
+        url: "/research/research-005/"
         stage: "Prospective evaluation"
         outcome: "FALSIFIED"
         ended: "Annualized net return was +20.50%, but the complete frozen rule failed: Sharpe was about 0.368 versus 0.50 required, the one-sided 95% HAC lower bound was negative, only 3 of 4 folds were positive, and maximum drawdown was about −29.59%."
