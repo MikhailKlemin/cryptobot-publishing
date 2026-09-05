@@ -51,6 +51,29 @@
   color: #9aa5ab;
 }
 
+.lineage-kicker {
+  margin: -18px 0 38px;
+  font-size: .9rem;
+}
+
+.lineage-kicker a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.lineage-kicker a:hover {
+  color: var(--accent);
+}
+
+.lineage-kicker span:first-child {
+  margin-right: 4px;
+  color: var(--accent);
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .source-lineage {
   margin: 0 0 54px;
   padding: 26px;
@@ -285,6 +308,10 @@
 
   .publication-meta span + span::before {
     content: none;
+  }
+
+  .lineage-kicker {
+    margin-top: -12px;
   }
 
   .evidence-files {
