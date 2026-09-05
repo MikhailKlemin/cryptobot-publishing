@@ -1,0 +1,31 @@
+{{ define "main" }}
+<section class="page-header note-header">
+  <div class="shell narrow">
+    <p class="eyebrow">{{ .Params.eyebrow | default "Engineering note" }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}
+    <div class="publication-meta" aria-label="Publication metadata">
+      <span>Published {{ .Date.Format "2 Jan 2006" }}</span>
+      {{ with .Lastmod }}<span>Updated {{ .Format "2 Jan 2006" }}</span>{{ end }}
+      <span>Research state: closed</span>
+    </div>
+  </div>
+</section>
+
+<section class="shell narrow note-body">
+  {{ with .Params.source_case }}
+  <aside class="note-source-link">
+    <span>Worked example</span>
+    <a href="{{ . | relURL }}">{{ $.Params.source_label | default "View the source case study" }} <span aria-hidden="true">→</span></a>
+  </aside>
+  {{ end }}
+
+  <article class="prose note-prose">
+    {{ .Content }}
+  </article>
+
+  <nav class="note-back" aria-label="Notes navigation">
+    <a class="text-link" href="{{ "notes/" | relURL }}">← Back to engineering notes</a>
+  </nav>
+</section>
+{{ end }}
