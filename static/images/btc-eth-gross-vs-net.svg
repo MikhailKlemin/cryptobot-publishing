@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" role="img" aria-labelledby="title desc">
+  <title id="title">Gross versus net mean return</title>
+  <desc id="desc">The strategy's gross mean return was positive 4.58 basis points per trade. After the frozen 20 basis point round-trip cost, mean net return was negative 15.42 basis points.</desc>
+  <rect width="900" height="420" fill="#ffffff"/>
+  <text x="54" y="52" font-family="system-ui, sans-serif" font-size="26" font-weight="700" fill="#172026">Frozen costs reversed the sign</text>
+  <text x="54" y="82" font-family="system-ui, sans-serif" font-size="15" fill="#5e6b73">Mean log return per executed hypothetical trade</text>
+  <line x1="105" y1="210" x2="840" y2="210" stroke="#aeb9bf" stroke-width="1.5"/>
+  <text x="58" y="215" font-family="system-ui, sans-serif" font-size="13" fill="#5e6b73">0 bps</text>
+  <rect x="210" y="153" width="180" height="57" rx="5" fill="#245d70"/>
+  <text x="300" y="142" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#172026">+4.58 bps</text>
+  <text x="300" y="254" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#5e6b73">Gross mean</text>
+  <rect x="520" y="210" width="180" height="192" rx="5" fill="#d9dfe3"/>
+  <text x="610" y="391" text-anchor="middle" font-family="system-ui, sans-serif" font-size="18" font-weight="700" fill="#172026">−15.42 bps</text>
+  <text x="610" y="254" text-anchor="middle" font-family="system-ui, sans-serif" font-size="15" fill="#5e6b73">Net mean</text>
+  <path d="M395 181 C445 160,465 160,515 181" fill="none" stroke="#5e6b73" stroke-width="2" stroke-dasharray="6 6"/>
+  <text x="455" y="143" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="700" fill="#5e6b73">20 bps frozen round-trip cost</text>
+</svg>
