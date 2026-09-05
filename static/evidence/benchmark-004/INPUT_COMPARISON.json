@@ -1,0 +1,17 @@
+{
+  "kind": "benchmark_004b_input_comparison",
+  "dates": 1704,
+  "symbols": 66,
+  "fields_per_date_symbol": 4,
+  "compared_field_cells": 449856,
+  "missingness_disagreements": 0,
+  "numeric_disagreements": 0,
+  "differing_date_symbol_rows": 0,
+  "exact_numeric_match": true,
+  "archived_canonical_sha256": "b5d5653c74526092d5334f33ee27c80efd8bd0ccbf7d86b6718e7077eaaa84a5",
+  "independent_canonical_sha256": "b5d5653c74526092d5334f33ee27c80efd8bd0ccbf7d86b6718e7077eaaa84a5",
+  "canonical_sha256_match": true,
+  "max_abs_difference": 0,
+  "max_relative_difference": 0,
+  "first_differences": null
+}
