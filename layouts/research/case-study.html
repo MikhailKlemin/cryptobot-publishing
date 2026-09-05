@@ -56,6 +56,24 @@
   </aside>
   {{ end }}
 
+  {{ $report := index site.Data.publication_reports .File.ContentBaseName }}
+  {{ with $report }}
+    {{ if fileExists .file }}
+    <aside class="source-lineage" aria-labelledby="publication-report-title">
+      <p class="eyebrow">Downloadable report</p>
+      <h2 id="publication-report-title">{{ .title }}</h2>
+      <p>{{ .note }}</p>
+      <p><a class="button" href="{{ .url | relURL }}" download>Download PDF</a></p>
+      <dl class="source-lineage-grid">
+        <dt>Format</dt>
+        <dd>{{ .format }}</dd>
+        <dt>Report SHA-256</dt>
+        <dd><code>{{ .sha256 }}</code></dd>
+      </dl>
+    </aside>
+    {{ end }}
+  {{ end }}
+
   {{ with .Params.metric_guide }}
   <section class="metric-guide" aria-labelledby="metric-guide-title">
     <div class="metric-guide-head">
