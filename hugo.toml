@@ -1,3 +1,4 @@
+baseURL = "https://backtestdiscipline.com/"
 title = "Backtest Discipline"
 locale = "en-US"
 enableRobotsTXT = true

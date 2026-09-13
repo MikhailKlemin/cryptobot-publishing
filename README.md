@@ -4,6 +4,8 @@ Public Hugo source for **Backtest Discipline**, a technical publication about co
 
 The repository keeps its original `cryptobot-publishing` name so existing history and links remain intact. The underlying `cryptobot-research` program is closed; this repository publishes from that preserved record rather than continuing strategy discovery.
 
+Public site: https://backtestdiscipline.com/
+
 ## Public state
 
 Usable now:
@@ -16,9 +18,9 @@ Usable now:
 - engineering notes grounded in preserved cases;
 - downloadable publication reports for Benchmark 004 and Research 005;
 - About page with maintainer, evidence policy, source, and correction route;
+- custom domain on Cloudflare Workers + Static Assets;
+- canonical and social metadata tied to the public domain;
 - responsive static presentation with no CMS, database, external fonts, or application backend.
-
-The site is deployed through Cloudflare Workers + Static Assets. Custom-domain wiring and domain-dependent metadata are the next deployment milestone.
 
 ## Run locally
 
