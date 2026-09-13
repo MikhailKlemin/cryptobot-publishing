@@ -3,7 +3,7 @@ title: "Methodology"
 description: "A practical workflow for making trading-strategy research reproducible, prospective, and capable of saying no."
 ---
 
-A backtest becomes difficult to trust when the hypothesis, source data, executable rules, cost model, and definition of success can all move after the result is visible. Cryptobot Research evolved toward a simpler goal: **close those degrees of freedom before they can rescue a disappointing experiment.**
+A backtest becomes difficult to trust when the hypothesis, source data, executable rules, cost model, and definition of success can all move after the result is visible. The research program evolved toward a simpler goal: **close those degrees of freedom before they can rescue a disappointing experiment.**
 
 The research program is now closed. This page describes the controls that remain useful beyond it.
 
