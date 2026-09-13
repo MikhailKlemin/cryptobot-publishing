@@ -1,3 +1,4 @@
+baseURL = "https://backtestdiscipline.com/"
 title = "Backtest Discipline"
 locale = "en-US"
 enableRobotsTXT = true
@@ -6,6 +7,7 @@ disableKinds = ["taxonomy", "term"]
 [params]
   description = "Controlled trading-strategy evaluation: reproducibility, prospective freezing, provenance, and falsification."
   author = "Backtest Discipline"
+  site_name = "Backtest Discipline"
 
 [menu]
   [[menu.main]]
