@@ -2,7 +2,7 @@
 title: "Research record"
 description: "A selective record of empirical falsifications, pre-evaluation stops, and the reproduction and prospective milestones that closed the project."
 intro: |-
-  Cryptobot Research was not a single strategy test. The research lineage contains many candidate mechanisms and several different kinds of terminal outcome. A preserved checkpoint recorded **16 completed empirical studies and 16 empirical falsifications**. Other candidates stopped earlier because a frozen source requirement, data-admission rule, or capability boundary could not be satisfied.
+  The closed research program was not a single strategy test. Its lineage contains many candidate mechanisms and several different kinds of terminal outcome. A preserved checkpoint recorded **16 completed empirical studies and 16 empirical falsifications**. Other candidates stopped earlier because a frozen source requirement, data-admission rule, or capability boundary could not be satisfied.
 
   This page is deliberately selective. It does not turn every internal iteration into a public article. The entries below are included because they show materially different ways controlled research can end.
 groups:

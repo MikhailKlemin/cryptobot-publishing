@@ -1,10 +1,10 @@
 ---
 title: "About"
-description: "What Cryptobot Research is, how the published evidence is handled, and where to raise corrections."
+description: "What Backtest Discipline is, how the published evidence is handled, and where to raise corrections."
 eyebrow: "About the publication"
 ---
 
-Cryptobot Research is an independent technical publication built from a completed crypto strategy-research program. The research program itself is closed; this site turns the preserved work into case studies, methodology, engineering notes, and selected evidence that can be inspected without reopening strategy discovery.
+Backtest Discipline is an independent technical publication built from a completed crypto strategy-research program. The research program itself is closed; this site turns the preserved work into case studies, methodology, engineering notes, and selected evidence that can be inspected without reopening strategy discovery.
 
 ## What this site is for
 
@@ -14,7 +14,7 @@ That is the focus here. The [research record](/research/) shows concrete outcome
 
 ## What it is not
 
-Cryptobot Research is not a trading-signal service, a managed fund, a live trading bot, or an ongoing strategy-discovery project. No strategy from the closed research program was authorized for promotion into the separate trading runtime.
+Backtest Discipline is not a trading-signal service, a managed fund, a live trading bot, or an ongoing strategy-discovery project. No strategy from the closed research program was authorized for promotion into the separate trading runtime.
 
 The site also does not treat historical backtest performance as evidence of guaranteed or deployable profitability. A reproduction can succeed while the underlying methodology still has limitations; a strategy can show a positive headline return and still fail the acceptance rule that was frozen before evaluation.
 
@@ -28,9 +28,9 @@ Raw provider payloads, private machine paths, binaries, credentials, and interna
 
 ## Maintainer and source
 
-Cryptobot Research is maintained independently by **Mikhail Klemin** as a single-person publishing project.
+Backtest Discipline is maintained independently by **Mikhail Klemin** as a single-person publishing project.
 
-The public publishing source is available on [GitHub](https://github.com/MikhailKlemin/cryptobot-publishing). The repository contains the Hugo site, editorial source, selected public evidence, and the publication-report provenance used by this website.
+The public publishing source is available on [GitHub](https://github.com/MikhailKlemin/cryptobot-publishing). The repository contains the Hugo site, editorial source, selected public evidence, and the publication-report provenance used by this website. The repository keeps its original `cryptobot-publishing` name so existing history and links remain intact; **Backtest Discipline** is the public publication name.
 
 ## Corrections and contact
 

@@ -1,11 +1,11 @@
-title = "Cryptobot Research"
+title = "Backtest Discipline"
 locale = "en-US"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Controlled crypto strategy research: reproducibility, prospective evaluation, provenance, and falsification."
-  author = "Cryptobot Research"
+  description = "Controlled trading-strategy evaluation: reproducibility, prospective freezing, provenance, and falsification."
+  author = "Backtest Discipline"
 
 [menu]
   [[menu.main]]

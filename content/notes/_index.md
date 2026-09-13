@@ -1,6 +1,6 @@
 ---
 title: "Engineering notes"
-description: "Technical lessons drawn from the preserved Cryptobot Research case studies and research machinery."
+description: "Technical lessons drawn from the preserved case studies and research machinery behind Backtest Discipline."
 intro: |-
   The case studies show **what happened** in individual experiments. These notes pull out the engineering lessons that are easier to miss inside a result: executable specifications, provenance, data contracts, deterministic evaluation, and the ways software can quietly change the question being tested.
 

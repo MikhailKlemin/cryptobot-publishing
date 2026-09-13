@@ -1,5 +1,5 @@
 ---
-title: "Cryptobot Research"
+title: "Backtest Discipline"
 description: "A technical publication about controlled trading-strategy evaluation, built from a completed crypto research program."
 eyebrow: "Controlled strategy evaluation"
 headline: "Trading research is easy to optimize. Harder to falsify."
@@ -8,7 +8,7 @@ intro_title: "What this site is for"
 intro: |-
   A backtest can be made more attractive in many small ways: change a parameter, move a date, choose another cost assumption, discard an awkward period, or reinterpret the success criterion after seeing the result. The difficult part is building a process that can still say **no** when the numbers look tempting.
 
-  Cryptobot Research documents that process using preserved work from a completed research program. Strategy discovery is closed. The site is not a source of trading signals; it is a record of how hypotheses were reproduced, frozen, evaluated, rejected, or stopped before evaluation when the evidence contract could not be satisfied.
+  Backtest Discipline documents that process using preserved work from a completed research program. Strategy discovery is closed. The site is not a source of trading signals; it is a record of how hypotheses were reproduced, frozen, evaluated, rejected, or stopped before evaluation when the evidence contract could not be satisfied.
 lanes_title: "Three ways into the work"
 lanes_intro: "The publication is broader than one experiment. Research 005 is the most complete falsification case today, while Benchmark 004 provides the corresponding reproduction case. Methodology explains the controls; engineering notes pull reusable lessons out of those concrete cases."
 lanes:

@@ -1,29 +1,24 @@
-# cryptobot-publishing
+# Backtest Discipline
 
-Minimal Hugo site for publishing evidence-backed material from the closed `cryptobot-research` project.
+Public Hugo source for **Backtest Discipline**, a technical publication about controlled trading-strategy evaluation, reproducibility, prospective freezing, provenance, and falsification.
 
-## Current milestone
+The repository keeps its original `cryptobot-publishing` name so existing history and links remain intact. The underlying `cryptobot-research` program is closed; this repository publishes from that preserved record rather than continuing strategy discovery.
 
-Milestone 002.2 is the final local polish pass before first deployment. It does not expand the site architecture.
+## Public state
 
 Usable now:
 
-- evidence-backed homepage with a restrained technical presentation;
-- Benchmark 004 and Research 005 result panels with natural card heights;
-- Research 005 acceptance metrics and terminal result in one compact 2×3 evidence grid;
-- real methodology page;
-- responsive, dependency-free presentation;
-- keyboard-accessible skip link that stays out of the visual layout until focused;
-- no JavaScript, analytics, CMS, database, external fonts, or paid services;
-- public prose edited for a natural, concrete technical voice while remaining constrained by the final documented research handoff.
+- evidence-backed homepage and selective research record;
+- detailed Benchmark 004 independent-reproduction case study;
+- detailed Research 005 prospective-falsification case study;
+- selected inspectable evidence artifacts with hashes;
+- practical methodology page;
+- engineering notes grounded in preserved cases;
+- downloadable publication reports for Benchmark 004 and Research 005;
+- About page with maintainer, evidence policy, source, and correction route;
+- responsive static presentation with no CMS, database, external fonts, or application backend.
 
-Not added yet:
-
-- Research 005 long-form case study;
-- detailed evidence/citation pages;
-- custom domain;
-- Cloudflare deployment configuration;
-- analytics.
+The site is deployed through Cloudflare Workers + Static Assets. Custom-domain wiring and domain-dependent metadata are the next deployment milestone.
 
 ## Run locally
 
@@ -44,3 +39,5 @@ The generated site will be in `public/`.
 ## Publishing boundary
 
 Do not turn positive historical metrics into claims of a deployable or guaranteed profitable strategy. Research 005 remains `FALSIFIED`, and no strategy was authorized for trading-runtime promotion.
+
+Publishing changes may improve explanation, layout, evidence access, and provenance. They do not replay, retune, or silently extend the closed research program.
