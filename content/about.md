@@ -4,7 +4,7 @@ description: "What Backtest Discipline is, how the published evidence is handled
 eyebrow: "About the publication"
 ---
 
-Backtest Discipline is an independent technical publication built from a completed crypto strategy-research program. The research program itself is closed; this site turns the preserved work into case studies, methodology, engineering notes, and selected evidence that can be inspected without reopening strategy discovery.
+Backtest Discipline is an independent technical publication built from a crypto strategy-research program. The site turns preserved research work into case studies, methodology, engineering notes, and selected evidence while keeping each published result tied to the frozen experiment that produced it.
 
 ## What this site is for
 
@@ -14,7 +14,7 @@ That is the focus here. The [research record](/research/) shows concrete outcome
 
 ## What it is not
 
-Backtest Discipline is not a trading-signal service, a managed fund, a live trading bot, or an ongoing strategy-discovery project. No strategy from the closed research program was authorized for promotion into the separate trading runtime.
+Backtest Discipline is not a trading-signal service, a managed fund, or a live trading bot. Publishing a research result does not itself authorize a strategy for promotion into the separate trading runtime.
 
 The site also does not treat historical backtest performance as evidence of guaranteed or deployable profitability. A reproduction can succeed while the underlying methodology still has limitations; a strategy can show a positive headline return and still fail the acceptance rule that was frozen before evaluation.
 
@@ -22,7 +22,7 @@ The site also does not treat historical backtest performance as evidence of guar
 
 Concrete research claims published here are tied to preserved evidence. Where it helps a reader inspect a case directly, the site exposes selected frozen specifications, decision rules, deterministic evaluation outputs, hashes, and later publication reports.
 
-Those publication reports are summaries created after research closure. They are not presented as original runtime artifacts, and generating them did not replay, retune, recapture, or re-evaluate the experiments.
+Those publication reports are summaries created after the relevant experiments had closed. They are not presented as original runtime artifacts, and generating them did not replay, retune, recapture, or re-evaluate the experiments.
 
 Raw provider payloads, private machine paths, binaries, credentials, and internal runner material are not published merely because they exist. The aim is useful transparency, not indiscriminate release of development artifacts.
 
@@ -42,4 +42,4 @@ A separate contact form is intentionally not part of the site at this stage. The
 
 ## The research boundary
 
-Publishing can explain the closed record more clearly, but it does not silently extend it. If a future article would require new market data, new strategy parameters, a new holdout, or another empirical test, that would be a proposal to reopen research work explicitly rather than an editorial update to this site.
+Publishing can explain the preserved record more clearly, but it does not silently extend or alter the experiments it documents. New market data, new strategy parameters, new holdouts, or additional empirical tests belong to the separate research project and require explicit authorization there rather than appearing as editorial changes to this site.
