@@ -1,5 +1,5 @@
 ---
-title: "A published Bitcoin trend strategy reduced drawdown — and still failed our test"
+title: "A published Bitcoin trend strategy reduced drawdown — but still failed"
 description: "A prospective four-horizon replication of a published BTC trend-following mechanism reduced drawdown at every lookback, but all four variants produced negative mean excess return versus the frozen benchmark."
 layout: "case-study"
 eyebrow: "Published strategy replication"
