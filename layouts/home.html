@@ -53,12 +53,19 @@
       <p>{{ .Params.lanes_intro }}</p>
     </div>
     <div class="lanes-grid">
-      {{ range .Params.lanes }}
+      {{ range $index, $lane := .Params.lanes }}
       <article class="lane-card">
-        <p class="record-stage">{{ .label }}</p>
-        <h3>{{ .title }}</h3>
-        <p>{{ .body }}</p>
-        <a class="text-link" href="{{ .url | relURL }}">{{ .link }} <span aria-hidden="true">→</span></a>
+        <div class="lane-heading">
+          <span class="semantic-icon" aria-hidden="true">
+            {{ if eq $index 0 }}{{ partial "icon.html" "flask-conical" }}{{ else if eq $index 1 }}{{ partial "icon.html" "book-open" }}{{ else }}{{ partial "icon.html" "code-2" }}{{ end }}
+          </span>
+          <div>
+            <p class="record-stage">{{ $lane.label }}</p>
+            <h3>{{ $lane.title }}</h3>
+          </div>
+        </div>
+        <p>{{ $lane.body }}</p>
+        <a class="text-link" href="{{ $lane.url | relURL }}">{{ $lane.link }} <span aria-hidden="true">→</span></a>
       </article>
       {{ end }}
     </div>
