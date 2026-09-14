@@ -9,6 +9,11 @@ groups:
   - title: "Empirical falsification"
     note: "Representative completed evaluations that reached a frozen empirical verdict."
     records:
+      - case: "Published Strategy Replication 001 — Le & Ruthbah BTC trend following"
+        url: "/research/published-strategy-replication-001/"
+        stage: "Published-strategy replication"
+        outcome: "FALSIFIED"
+        ended: "All four published BTC lookbacks reduced maximum drawdown, but all four had negative mean excess return versus the frozen buy-and-hold benchmark. Zero of four variants survived the predeclared family rule."
       - case: "Attention-shock cycle"
         stage: "Real-data deterministic evaluation"
         outcome: "FALSIFIED"
@@ -44,6 +49,10 @@ groups:
 ---
 
 ## Detailed case studies
+
+[Published Strategy Replication 001: a Bitcoin trend strategy reduced drawdown — and still failed →](/research/published-strategy-replication-001/)
+
+All four published BTC lookbacks were frozen as a family and evaluated on a subsequent out-of-sample period. Every variant reduced drawdown, but every mean excess-return estimate was negative versus the frozen buy-and-hold benchmark.
 
 [Benchmark 004: reproduce the result before trusting it →](/research/benchmark-004/)
 
