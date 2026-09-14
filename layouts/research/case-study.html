@@ -34,20 +34,20 @@
   {{ with .Params.lineage_nav }}
   <div class="lineage-kicker" aria-label="Case study lineage">
     {{ range first 1 . }}
-    <a href="{{ .url | relURL }}"><span>{{ .direction }}</span> {{ .title }} <span aria-hidden="true">→</span></a>
+    <a href="{{ .url | relURL }}">{{ partial "icon.html" "git-branch" }}<span>{{ .direction }}</span> {{ .title }} <span aria-hidden="true">→</span></a>
     {{ end }}
   </div>
   {{ end }}
 
   {{ with .Params.source_lineage }}
   <aside class="source-lineage" aria-labelledby="source-lineage-title">
-    <p class="eyebrow">Source and lineage</p>
+    <p class="eyebrow icon-eyebrow">{{ partial "icon.html" "git-branch" }}<span>Source and lineage</span></p>
     <h2 id="source-lineage-title">Where this strategy came from</h2>
     <dl class="source-lineage-grid">
       <dt>Origin</dt>
       <dd>{{ .origin }}</dd>
       <dt>Original source</dt>
-      <dd><a href="{{ .source_url | safeURL }}">{{ .source }} ↗</a></dd>
+      <dd><a class="external-reference" href="{{ .source_url | safeURL }}">{{ .source }} {{ partial "icon.html" "external-link" }}</a></dd>
       <dt>Frozen source commit</dt>
       <dd><code>{{ .commit }}</code></dd>
       <dt>Relationship</dt>
@@ -60,10 +60,10 @@
   {{ with $report }}
     {{ if fileExists .file }}
     <aside class="source-lineage" aria-labelledby="publication-report-title">
-      <p class="eyebrow">Downloadable report</p>
+      <p class="eyebrow icon-eyebrow">{{ partial "icon.html" "file-text" }}<span>Downloadable report</span></p>
       <h2 id="publication-report-title">{{ .title }}</h2>
       <p>{{ .note }}</p>
-      <p><a class="button" href="{{ .url | relURL }}" download>Download PDF</a></p>
+      <p><a class="button button-with-icon" href="{{ .url | relURL }}" download>{{ partial "icon.html" "file-text" }}<span>Download PDF</span></a></p>
       <dl class="source-lineage-grid">
         <dt>Format</dt>
         <dd>{{ .format }}</dd>
@@ -77,7 +77,7 @@
   {{ with .Params.metric_guide }}
   <section class="metric-guide" aria-labelledby="metric-guide-title">
     <div class="metric-guide-head">
-      <p class="eyebrow">Reading the result</p>
+      <p class="eyebrow icon-eyebrow">{{ partial "icon.html" "book-open" }}<span>Reading the result</span></p>
       <h2 id="metric-guide-title">How to read these numbers</h2>
       <p>The headline metrics answer different questions. These short definitions are the interpretation used on this page, not additional evaluation criteria.</p>
     </div>
@@ -128,7 +128,7 @@
   {{ with .Params.evidence_files }}
   <section class="evidence-files" aria-labelledby="evidence-files-title">
     <div class="evidence-files-heading">
-      <p class="eyebrow">Inspect the evidence</p>
+      <p class="eyebrow icon-eyebrow">{{ partial "icon.html" "archive" }}<span>Inspect the evidence</span></p>
       <h2 id="evidence-files-title">Selected preserved artifacts</h2>
       <p>{{ $.Params.evidence_note | default "These are selected text artifacts copied from the preserved terminal evidence. Raw market payloads, binaries, private paths, and unrelated runner material are intentionally not published." }}</p>
     </div>
@@ -153,7 +153,7 @@
   <nav class="case-lineage-nav" aria-label="Case study lineage">
     {{ range . }}
     <a class="case-lineage-link" href="{{ .url | relURL }}">
-      <span>{{ .direction }}</span>
+      <span class="case-lineage-direction">{{ partial "icon.html" "git-branch" }}{{ .direction }}</span>
       <strong>{{ .title }}</strong>
       {{ with .note }}<small>{{ . }}</small>{{ end }}
     </a>

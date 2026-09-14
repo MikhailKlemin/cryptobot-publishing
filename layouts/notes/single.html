@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="page-header note-header">
   <div class="shell narrow">
-    <p class="eyebrow">{{ .Params.eyebrow | default "Engineering note" }}</p>
+    <p class="eyebrow icon-eyebrow">{{ partial "icon.html" "code-2" }}<span>{{ .Params.eyebrow | default "Engineering note" }}</span></p>
     <h1>{{ .Title }}</h1>
     {{ with .Params.lead }}<div class="page-description note-lead">{{ . | markdownify }}</div>{{ else }}{{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}{{ end }}
     <div class="publication-meta" aria-label="Publication metadata">
@@ -15,7 +15,7 @@
 <section class="shell narrow note-body">
   {{ with .Params.source_case }}
   <aside class="note-source-link">
-    <span>Drawn from a preserved case</span>
+    <span class="note-source-label">{{ partial "icon.html" "flask-conical" }}<span>Drawn from a preserved case</span></span>
     <a href="{{ . | relURL }}">{{ $.Params.source_label | default "View the source case study" }} <span aria-hidden="true">→</span></a>
   </aside>
   {{ end }}
