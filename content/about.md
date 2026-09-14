@@ -34,7 +34,9 @@ The public publishing source is available on [GitHub](https://github.com/Mikhail
 
 ## Corrections and contact
 
-For a factual correction, broken evidence link, or question about a published claim, please [open an issue in the publishing repository](https://github.com/MikhailKlemin/cryptobot-publishing/issues). Referencing the page and the relevant evidence artifact or hash, when applicable, makes the issue easier to check.
+For a factual correction, broken evidence link, question about a published claim, or other publication-related contact, email [contact@backtestdiscipline.com](mailto:contact@backtestdiscipline.com).
+
+For corrections that benefit from public tracking, you can also [open an issue in the publishing repository](https://github.com/MikhailKlemin/cryptobot-publishing/issues). Referencing the page and the relevant evidence artifact or hash, when applicable, makes the issue easier to check.
 
 A separate contact form is intentionally not part of the site at this stage. The project is kept small and static unless a real publishing need justifies additional infrastructure.
 
