@@ -48,8 +48,13 @@
       <dd>{{ .origin }}</dd>
       <dt>Original source</dt>
       <dd><a class="external-reference" href="{{ .source_url | safeURL }}">{{ .source }} {{ partial "icon.html" "external-link" }}</a></dd>
+      {{ if .source_id }}
+      <dt>{{ .source_id_label | default "Source identity" }}</dt>
+      <dd><code>{{ .source_id }}</code></dd>
+      {{ else }}
       <dt>Frozen source commit</dt>
       <dd><code>{{ .commit }}</code></dd>
+      {{ end }}
       <dt>Relationship</dt>
       <dd>{{ .relationship }}</dd>
     </dl>
