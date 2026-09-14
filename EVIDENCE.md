@@ -62,6 +62,49 @@ Authoritative terminal bundle inspected for the detailed public page:
 - `CAPTURE_RECEIPT.json` records 66/66 successful provider requests with zero retries and complete capture. 65 symbol responses contain 365 klines; `OMUSDT` contains 183. The frozen strategy/capture semantics already permit legitimate venue-bar absence as missing data, so this should not be described as an ad-hoc repair or post-hoc universe change.
 - The public charts `research-005-gross-net.svg` and `research-005-fold-means.svg` are editorial renderings of values already present in `EVALUATION.json`; they are not a replay, optimization, or new empirical evaluation.
 
+## Published Strategy Replication 001 — Le & Ruthbah BTC trend following
+
+Authoritative publishing sources for this page:
+
+- uploaded paper `Trend-following-Strategies-for-Crypto-Investors.pdf`, Trinh Le and Ummul Ruthbah, August 2023;
+- uploaded terminal artifact `published-strategy-replication-001-evaluation.json`;
+- uploaded terminal artifact `published-strategy-replication-001-research-result.json`.
+
+Publication evidence and wording constraints:
+
+- The paper's historical BTC source is an S&P Bitcoin index series backed by Lukka Prime, with the reported BTC sample ending 31 January 2023. The paper studies 20, 65, 150 and 200-day trend horizons and reports historically strong trend-following results, especially for shorter horizons. It separately evaluates transaction costs at 0.1%, 0.25% and 0.5%.
+- The paper is dated August 2023, while the replication evaluation period begins 1 February 2023. Therefore the public article must describe the new period as subsequent out-of-sample / post-sample data, not claim that every evaluation observation is post-publication data.
+- Replication source/data contract: BTCUSDT, official Binance Spot public daily klines, one-day frequency, LONG / FLAT semantics, 20/65/150/200-day published lookbacks, warm-up/capture beginning 16 July 2022, 1509/1509 expected bars, two public provider requests, 0.1% transaction cost per traded leg.
+- Timing contract: signal only after a completed UTC daily bar; target changes effective at the following UTC daily open. This was the prospectively frozen conservative implementation because the paper does not specify exchange execution timing precisely enough for a literal tradable implementation.
+- Benchmark: cost-adjusted BTC buy-and-hold under the frozen evaluation contract.
+- Variant survival required all three conditions: positive mean daily net excess log return versus benchmark; positive one-sided 95% Bartlett-HAC(20) lower bound; improved maximum drawdown versus benchmark. Family survival required at least three of four published lookbacks to survive; no post-result lookback winner could be selected.
+- Terminal outcome: `FALSIFIED`, reason `PUBLISHED_TREND_FAMILY_CRITERIA_NOT_SATISFIED`, surviving variants 0/4.
+- Benchmark: +239.13% cumulative net return, 40.60% annualized net return, 46.32% annualized volatility, 0.736 annualized Sharpe, 52.97% maximum drawdown.
+- 20-day: +78.05% cumulative, 17.47% annualized, Sharpe 0.494, max drawdown 33.13%, mean excess -4.93 bps/day, one-sided 95% HAC lower bound -11.91 bps/day, failed.
+- 65-day: +170.62% cumulative, 32.02% annualized, Sharpe 0.830, max drawdown 35.45%, mean excess -1.73 bps/day, lower bound -8.24 bps/day, failed.
+- 150-day: +190.43% cumulative, 34.65% annualized, Sharpe 0.829, max drawdown 25.59%, mean excess -1.19 bps/day, lower bound -7.35 bps/day, failed.
+- 200-day: +185.45% cumulative, 34.00% annualized, Sharpe 0.785, max drawdown 31.67%, mean excess -1.32 bps/day, lower bound -7.48 bps/day, failed.
+- All four variants improved drawdown, but all four observed mean excess-return estimates were already negative before considering the confidence bound. The 150-day variant's higher Sharpe and much lower drawdown are a risk-characteristic observation only and must not be reframed as a surviving or promoted strategy.
+- Do not say that the original paper was wrong. The supported conclusion is that the published BTC mechanism did not survive this frozen subsequent evaluation under the Binance data, next-open timing, transaction-cost, benchmark and survival contract.
+- Research result counters: external AI attempts 0; provider calls 2; public data requests 2; evaluator invocations 1; protected reads 0; qualification decisions 0; exports 0; product communications 0; paper orders 0; live orders 0.
+- No qualification, export, paper trading, live trading or integration with the separate `cryptobot` runtime occurred.
+
+Deterministic identities used on the page:
+
+- publication source `d185408c6c047a74f55f05868886deb46feaa6c37f4e51719ff6e904d4fa31c3`
+- proposal `48080d526ea006e31aafb25b250e59c3025ba5a309d3d4848200f94b5c35466f`
+- experiment `e8b616f494a35fe43ef16f46ef1fac1590189c1d9358a0304fa06202ec297315`
+- dataset `7ea7f981bedd01448579d14d76ebcdbc649da8657ab0c06c215ec790cc118173`
+- signal manifest `1ea305ddffd464380c64c007f05da0b2397947f57d061ac5536f37c0163715f0`
+- evaluation `4e2700eb52bb549d6110e1ad5cc543eccc2f3e3d8437c2b4ef94373425f3bb70`
+- research result `329ef70346266423bec9377f07553cf89a3bacd7d5cf237d388a7630ede4624d`
+- novelty history `f9fccc6394470b15213a5f0a4d8a32505ba2609cef246ed72ce6dcffbf3142aa`
+
+Published excerpts:
+
+- `static/evidence/published-strategy-replication-001/published-strategy-replication-001-evaluation.json` — exact uploaded evaluation; SHA-256 `4e2700eb52bb549d6110e1ad5cc543eccc2f3e3d8437c2b4ef94373425f3bb70`.
+- `static/evidence/published-strategy-replication-001/published-strategy-replication-001-research-result.json` — exact uploaded terminal result; SHA-256 `329ef70346266423bec9377f07553cf89a3bacd7d5cf237d388a7630ede4624d`.
+
 ## Published evidence excerpts
 
 PR #4 publishes only selected text artifacts with a direct explanatory benefit. Each public file was compared byte-for-byte with the corresponding artifact in the uploaded preserved bundle using Git blob identity before opening the PR; the listed SHA-256 value on the case-study page is the source bundle's manifest hash.
