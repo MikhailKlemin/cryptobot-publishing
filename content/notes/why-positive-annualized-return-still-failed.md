@@ -1,8 +1,8 @@
 ---
 title: "Why a +20.5% annualized return still failed our strategy test"
-description: "Research 005 finished with positive headline returns and still failed. The reason is simple: return was only one part of a decision rule frozen before the holdout was observed."
-lead: "Research 005 recorded a +5.26% compounded net return and a +20.50% arithmetic annualized mean return over its protected holdout. It still finished FALSIFIED because two required acceptance criteria did not pass."
-eyebrow: "Lesson from Research 005"
+description: "A prospectively frozen strategy test finished with positive headline returns and still failed. Return was only one part of a decision rule fixed before the holdout was observed."
+lead: "The protected holdout recorded a +5.26% compounded net return and a +20.50% arithmetic annualized mean return. It still finished FALSIFIED because two required acceptance criteria did not pass."
+eyebrow: "Lesson from a prospective falsification test"
 summary: "A positive return describes one dimension of a backtest. It does not override a multi-criterion acceptance rule that was fixed before the result was known."
 date: 2026-09-14
 lastmod: 2026-09-14
@@ -12,7 +12,7 @@ source_label: "Research 005 — prospective falsification case study"
 
 At first glance, the result looks contradictory.
 
-Research 005 ended its protected one-year evaluation with a **+5.26% compounded net return**. The evaluator also reported a **+20.50% annualized net return**. Yet the terminal verdict was `FALSIFIED`.
+[Research 005](/research/research-005/) ended its protected one-year evaluation with a **+5.26% compounded net return**. The evaluator also reported a **+20.50% annualized net return**. Yet the terminal verdict was `FALSIFIED`.
 
 Nothing was wrong with the arithmetic. The apparent contradiction comes from treating two different questions as if they were the same:
 
@@ -22,7 +22,7 @@ and
 
 > Did the frozen experiment satisfy the conditions required to survive?
 
-For Research 005, the answer to the first question was yes. The answer to the second was no.
+For this test, the answer to the first question was yes. The answer to the second was no.
 
 That distinction is more useful than the headline return.
 
@@ -45,11 +45,11 @@ So the clean reading of the result is not “the strategy made 20.5%.” It is:
 
 That already makes the headline less dramatic. It still leaves a positive result, but it describes the result accurately.
 
-The difference between gross and net performance matters too. Before the frozen turnover cost, cumulative return was **+28.39%**. After the fixed cost model, it was **+5.26%**. Research 005 did not respond to that gap by lowering the cost assumption after seeing the result. The cost rule was part of the frozen experiment.
+The difference between gross and net performance matters too. Before the frozen turnover cost, cumulative return was **+28.39%**. After the fixed cost model, it was **+5.26%**. The frozen evaluation did not respond to that gap by lowering the cost assumption after seeing the result. The cost rule was part of the experiment.
 
 ## Positive return was necessary, not sufficient
 
-Before the holdout was evaluated, Research 005 defined seven survival criteria. `SURVIVED_RESEARCH` required **all seven** to pass.
+Before the holdout was evaluated, the experiment defined seven survival criteria. `SURVIVED_RESEARCH` required **all seven** to pass.
 
 The strategy passed five:
 
@@ -74,7 +74,7 @@ This is the part that prospective evaluation changes. If the rule is written onl
 
 The Sharpe criterion asked a different question from cumulative return.
 
-A positive cumulative return tells us where the compounded path ended relative to where it started. Sharpe relates average return to observed variability. Research 005 used its own frozen definition and threshold: annualized net return divided by annualized net volatility, with survival requiring a value of at least **0.50**.
+A positive cumulative return tells us where the compounded path ended relative to where it started. Sharpe relates average return to observed variability. The experiment used its own frozen definition and threshold: annualized net return divided by annualized net volatility, with survival requiring a value of at least **0.50**.
 
 The result was **0.368**.
 
@@ -82,7 +82,7 @@ That does not mean 0.50 is a universal boundary between a good and bad strategy.
 
 Here, the failure says something narrower: the amount of return recorded in the holdout was not high enough relative to its observed variability to satisfy the experiment's predeclared requirement.
 
-That is important because a modest positive terminal gain can coexist with a rough path. Research 005 recorded a maximum drawdown of about **−29.59%**. The drawdown criterion itself passed because the frozen boundary was −50%, but the path still helps interpret the +5.26% net gain: the experiment reached that gain while experiencing a peak-to-trough decline of nearly thirty percent.
+That is important because a modest positive terminal gain can coexist with a rough path. The evaluation recorded a maximum drawdown of about **−29.59%**. The drawdown criterion itself passed because the frozen boundary was −50%, but the path still helps interpret the +5.26% net gain: the experiment reached that gain while experiencing a peak-to-trough decline of nearly thirty percent.
 
 Passing the drawdown gate did not make that path disappear, and it did not compensate for the failed Sharpe gate.
 
@@ -90,7 +90,7 @@ Passing the drawdown gate did not make that path disappear, and it did not compe
 
 The second failure is easier to overstate.
 
-Research 005 used a one-sided 95% Bartlett-HAC lower confidence bound on mean daily net return. The calculation was frozen in advance, including a **33-day lag** and the requirement to use all 365 physical daily returns. HAC was used so that the uncertainty calculation could account for serial dependence and changing variance rather than treating the daily observations as independent with constant variance.
+The frozen evaluation used a one-sided 95% Bartlett-HAC lower confidence bound on mean daily net return. The calculation was fixed in advance, including a **33-day lag** and the requirement to use all 365 physical daily returns. HAC was used so that the uncertainty calculation could account for serial dependence and changing variance rather than treating the daily observations as independent with constant variance.
 
 The resulting lower bound was approximately **−0.1002% per day**.
 
@@ -102,7 +102,7 @@ It means the experiment did **not establish the required positive lower confiden
 
 It does **not** mean the calculation proved that the strategy's true expected return is negative. It does not convert a positive sample mean into proof of negative profitability. It says that, given the variability and dependence present in this sample, the experiment's required level of statistical support for a positive mean was not reached.
 
-That difference matters. “The lower bound crossed zero” is a statement about uncertainty under a specified procedure. “The true return is negative” would be a much stronger claim, and Research 005 does not establish it.
+That difference matters. “The lower bound crossed zero” is a statement about uncertainty under a specified procedure. “The true return is negative” would be a much stronger claim, and this result does not establish it.
 
 ## Three positive folds were encouraging — and still not enough
 
@@ -157,9 +157,9 @@ A decision statement can also be completely true:
 
 > The strategy failed the experiment's frozen survival rule.
 
-There is no paradox unless “made money” is treated as synonymous with “passed.” Research 005 deliberately did not use that definition.
+There is no paradox unless “made money” is treated as synonymous with “passed.” The test deliberately did not use that definition.
 
-The experiment was not asking whether at least one metric looked favorable. It was asking whether one frozen executable strategy, on one frozen 66-symbol universe, over the protected period from **1 September 2025 through 31 August 2026**, satisfied all seven conditions committed to before evaluation.
+It was not asking whether at least one metric looked favorable. It was asking whether one frozen executable strategy, on one frozen 66-symbol universe, over the protected period from **1 September 2025 through 31 August 2026**, satisfied all seven conditions committed to before evaluation.
 
 It did not.
 
@@ -167,7 +167,7 @@ The terminal result was therefore `FALSIFIED`, and no strategy was authorized fo
 
 ## What a backtest developer can borrow from this
 
-The most reusable part of Research 005 is not its channel-breakout logic. It is the separation between measurement and decision.
+The most reusable part of this case is not its channel-breakout logic. It is the separation between measurement and decision.
 
 Before opening a holdout, write down what would count as survival. Include more than the metric you expect to look best. Define transaction costs, data handling, risk metrics, uncertainty treatment and any stability checks before the result can influence those choices.
 
