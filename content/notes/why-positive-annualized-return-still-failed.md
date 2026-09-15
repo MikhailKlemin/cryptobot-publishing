@@ -184,6 +184,6 @@ But neither was allowed to overrule the two failed conditions either.
 
 For the complete experiment record, see [Research 005](/research/research-005/). The broader workflow is described in [Methodology](/methodology/). The frozen rules and terminal outputs are available directly in the public evidence files: [decision specification](/evidence/research-005/FROZEN_DECISION_SPEC.md), [deterministic evaluation](/evidence/research-005/EVALUATION.json), [experiment definition](/evidence/research-005/RESEARCH_005_EXPERIMENT.json), and [terminal result](/evidence/research-005/RESEARCH_005_RESULT.json).
 
-A concise six-page version is also available as the [Research 005 frozen holdout evaluation report](/reports/research-005-prospective-evaluation-report.pdf).
+A concise six-page version is also available as the [Research 005 publication report (PDF)](/reports/research-005-prospective-evaluation-report.pdf).
 
 No research was replayed, retuned or extended for this article. It is an editorial explanation of already-preserved evidence from the completed Research 005 experiment.

@@ -3,7 +3,7 @@ benchmark-004:
   url: "/reports/benchmark-004-independent-reproduction-report.pdf"
   file: "static/reports/benchmark-004-independent-reproduction-report.pdf"
   format: "PDF · 6 pages"
-  note: "Publication report generated from preserved closed research evidence. No strategy replay, new market-data capture, or re-evaluation was performed for this document."
+  note: "Publication report generated from preserved evidence from the completed experiment. No strategy replay, new market-data capture, or re-evaluation was performed for this document."
   sha256: "ba58fb8dbe74573dfde68485bc2bc545dcdee0f00e03e7285c851d5bd48a2059"
 
 research-005:
@@ -11,5 +11,5 @@ research-005:
   url: "/reports/research-005-prospective-evaluation-report.pdf"
   file: "static/reports/research-005-prospective-evaluation-report.pdf"
   format: "PDF · 6 pages"
-  note: "Publication report generated from preserved closed research evidence. No strategy replay, retuning, new market-data capture, or re-evaluation was performed for this document."
+  note: "Publication report generated from preserved evidence from the completed experiment. No strategy replay, retuning, new market-data capture, or re-evaluation was performed for this document."
   sha256: "c2b4013d283e5a26e8266e32dec10792b407b5edd5f092f40bc90cddb92fb745"

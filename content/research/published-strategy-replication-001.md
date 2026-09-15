@@ -195,7 +195,7 @@ This page is derived from the preserved terminal research artifacts; the strateg
 
 The deterministic lineage was:
 
-`published paper → prospectively specified proposal → capability assessment → official-source admission → immutable experiment freeze → explicit authorization gate → bounded Binance capture → normalized dataset with provenance → deterministic four-horizon evaluation → FALSIFIED terminal result → immutable novelty-history registration`
+`published paper → pre-specified proposal → capability assessment → official-source admission → immutable experiment freeze → explicit authorization gate → bounded Binance capture → normalized dataset with provenance → deterministic four-horizon evaluation → FALSIFIED terminal result → immutable novelty-history registration`
 
 The principal identities are:
 
