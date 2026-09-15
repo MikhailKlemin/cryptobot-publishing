@@ -1,158 +1,125 @@
 {{ define "main" }}
+{{ $studies := (where site.RegularPages "Section" "research").ByDate.Reverse }}
 <section class="hero">
   <div class="shell hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">{{ .Params.eyebrow }}</p>
       <h1>{{ .Params.headline }}</h1>
       <p class="hero-summary">{{ .Params.summary }}</p>
+      <p class="publication-cadence">{{ .Params.cadence }}</p>
       <div class="hero-actions">
-        <a class="button" href="{{ "research/research-005/" | relURL }}">Read the featured case</a>
-        <a class="text-link" href="{{ "research/" | relURL }}">Browse the research record <span aria-hidden="true">→</span></a>
+        {{ range first 1 $studies }}
+        <a class="button" href="{{ .RelPermalink }}">Read the latest test</a>
+        {{ end }}
+        <a class="text-link" href="{{ "methodology/" | relURL }}">How the tests work <span aria-hidden="true">→</span></a>
       </div>
     </div>
-    <aside class="evidence-card" aria-label="Research status">
-      <p class="card-label">Research status</p>
-      <dl>
-        <div>
-          <dt>Discovery</dt>
-          <dd>Closed</dd>
-        </div>
-        <div>
-          <dt>Empirical studies</dt>
-          <dd>16 completed</dd>
-        </div>
-        <div>
-          <dt>Empirical falsifications</dt>
-          <dd>16</dd>
-        </div>
-        <div>
-          <dt>Trading promotion</dt>
-          <dd>None authorized</dd>
-        </div>
-      </dl>
-    </aside>
+    {{ range first 1 $studies }}
+    <article class="evidence-card latest-study" aria-labelledby="latest-study-title">
+      <p class="card-label">Latest evaluation · <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time></p>
+      <h2 id="latest-study-title"><a href="{{ .RelPermalink }}">{{ .Params.card_title | default .Title }}</a></h2>
+      <p>{{ .Params.card_summary | default .Params.summary }}</p>
+      <p class="study-context">{{ .Params.period }}<br>{{ .Params.universe }}</p>
+      <a class="text-link" href="{{ .RelPermalink }}">Read the evaluation <span aria-hidden="true">→</span></a>
+    </article>
+    {{ end }}
   </div>
 </section>
 
-<section class="shell intro-grid" aria-labelledby="about-title">
-  <article class="prose intro-copy">
-    <h2 id="about-title">{{ .Params.intro_title }}</h2>
-    {{ .Params.intro | markdownify }}
-  </article>
-  <aside class="side-note">
-    <p class="card-label">Editorial rule</p>
-    <p>Verified fact, interpretation, explanation, and speculation are kept distinct. Missing evidence is not filled with a better story.</p>
-  </aside>
-</section>
-
-<section class="lanes-section" aria-labelledby="lanes-title">
-  <div class="shell">
-    <div class="section-heading">
-      <p class="eyebrow">Publication scope</p>
-      <h2 id="lanes-title">{{ .Params.lanes_title }}</h2>
-      <p>{{ .Params.lanes_intro }}</p>
-    </div>
-    <div class="lanes-grid">
-      {{ range $index, $lane := .Params.lanes }}
-      <article class="lane-card">
-        <div class="lane-heading">
-          <span class="semantic-icon" aria-hidden="true">
-            {{ if eq $index 0 }}{{ partial "icon.html" "flask-conical" }}{{ else if eq $index 1 }}{{ partial "icon.html" "book-open" }}{{ else }}{{ partial "icon.html" "code-2" }}{{ end }}
-          </span>
-          <div>
-            <p class="record-stage">{{ $lane.label }}</p>
-            <h3>{{ $lane.title }}</h3>
-          </div>
-        </div>
-        <p>{{ $lane.body }}</p>
-        <a class="text-link" href="{{ $lane.url | relURL }}">{{ $lane.link }} <span aria-hidden="true">→</span></a>
-      </article>
-      {{ end }}
-    </div>
-  </div>
-</section>
-
-<section class="record-section" aria-labelledby="record-title">
+{{ if gt (len $studies) 1 }}
+<section class="publication-section" id="results" aria-labelledby="recent-title">
   <div class="shell">
     <div class="section-heading">
       <p class="eyebrow">Research record</p>
-      <h2 id="record-title">{{ .Params.record_title }}</h2>
-      <p>{{ .Params.record_intro }}</p>
+      <h2 id="recent-title">{{ .Params.recent_title }}</h2>
+      <p>{{ .Params.recent_intro }}</p>
     </div>
-
-    <div class="record-list">
-      {{ range .Params.record }}
-      <article class="record-row">
-        <div class="record-main">
-          <p class="record-stage">{{ .stage }}</p>
-          <h3>{{ .title }}</h3>
-          <p>{{ .summary }}</p>
-        </div>
-        <div class="record-outcome">{{ .outcome }}</div>
+    <div class="publication-grid">
+      {{ range first 2 (after 1 $studies) }}
+      <article class="lane-card">
+        <p class="record-stage">{{ .Params.eyebrow }}</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Params.card_title | default .Title }}</a></h3>
+        <p>{{ .Params.card_summary | default .Params.summary }}</p>
+        <p class="study-context"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time> · {{ .Params.period }}</p>
+        <a class="text-link" href="{{ .RelPermalink }}">Read the case study <span aria-hidden="true">→</span></a>
       </article>
       {{ end }}
     </div>
-
-    <p class="record-more"><a class="text-link" href="{{ "research/" | relURL }}">View the research record and outcome definitions <span aria-hidden="true">→</span></a></p>
+    <p class="record-more"><a class="text-link" href="{{ "research/" | relURL }}">Explore all evaluations and historical outcomes <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
+{{ end }}
 
-<section class="results-section" id="results" aria-labelledby="results-title">
+<section class="lanes-section" aria-labelledby="workflow-title">
   <div class="shell">
     <div class="section-heading">
-      <p class="eyebrow">Closure evidence</p>
-      <h2 id="results-title">{{ .Params.results_title }}</h2>
-      <p>{{ .Params.results_intro }}</p>
+      <p class="eyebrow">How the tests work</p>
+      <h2 id="workflow-title">{{ .Params.workflow_title }}</h2>
+      <p>{{ .Params.workflow_intro }}</p>
     </div>
-
-    <div class="result-grid">
-      {{ range $index, $result := .Params.results }}
-      <article class="result-card{{ if $result.metrics }} result-card-featured{{ end }}">
-        <div class="result-card-head">
-          <div>
-            <p class="result-kind">{{ $result.kind }}</p>
-            <h3>{{ $result.title }}</h3>
-          </div>
-          <span class="result-id">{{ $result.label }}</span>
-        </div>
-
-        <p class="result-body">{{ $result.body }}</p>
-
-        {{ with $result.metrics }}
-        <dl class="metrics" aria-label="Research 005 reported metrics">
-          {{ range . }}
-          <div class="metric">
-            <dt>{{ .label }}</dt>
-            <dd>
-              <strong>{{ .value }}</strong>
-              {{ with .note }}<span>{{ . }}</span>{{ end }}
-            </dd>
-          </div>
-          {{ end }}
-          <div class="metric metric-terminal">
-            <dt>Terminal result</dt>
-            <dd><code>{{ $result.status }}</code></dd>
-          </div>
-        </dl>
-        {{ else }}
-        <div class="result-status">
-          <span>Terminal result</span>
-          <code>{{ $result.status }}</code>
-        </div>
-        {{ end }}
-
-        {{ with $result.url }}
-        <p class="result-more"><a class="text-link" href="{{ . | relURL }}">Read the detailed case study <span aria-hidden="true">→</span></a></p>
-        {{ end }}
+    <div class="lanes-grid">
+      {{ range .Params.workflow }}
+      <article class="lane-card">
+        <p class="record-stage">{{ .label }}</p>
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
       </article>
       {{ end }}
     </div>
+    <p class="record-more"><a class="text-link" href="{{ "methodology/" | relURL }}">Read the methodology and its limits <span aria-hidden="true">→</span></a></p>
   </div>
 </section>
 
-<section class="shell home-body">
-  <article class="prose narrow">
-    {{ .Content }}
-  </article>
+{{ $notes := (where site.RegularPages "Section" "notes").ByDate.Reverse }}
+{{ with $notes }}
+<section class="publication-section" aria-labelledby="notes-title">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">Engineering notes</p>
+      <h2 id="notes-title">{{ $.Params.notes_title }}</h2>
+      <p>{{ $.Params.notes_intro }}</p>
+    </div>
+    <div class="publication-grid">
+      {{ range first 2 . }}
+      <article class="lane-card">
+        <p class="record-stage"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time> · Engineering note</p>
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Params.summary | default .Description }}</p>
+        <a class="text-link" href="{{ .RelPermalink }}">Read the note <span aria-hidden="true">→</span></a>
+      </article>
+      {{ end }}
+    </div>
+    <p class="record-more"><a class="text-link" href="{{ "notes/" | relURL }}">Browse engineering notes <span aria-hidden="true">→</span></a></p>
+  </div>
+</section>
+{{ end }}
+
+<section class="shell intro-grid publication-about" aria-labelledby="author-title">
+  <div class="prose intro-copy">
+    <p class="eyebrow">Behind the publication</p>
+    <h2 id="author-title">{{ .Params.author_title }}</h2>
+    <p>{{ .Params.author_intro }}</p>
+    <p>{{ .Params.author_note }}</p>
+    <a class="text-link" href="{{ "about/" | relURL }}">About Mikhail and the publication <span aria-hidden="true">→</span></a>
+  </div>
+  <aside class="side-note">
+    <p class="card-label">Evidence, not trading signals</p>
+    <p>Passing a research test is not a recommendation to trade. Public artifacts support inspection of selected evidence; they are not a complete rerun package.</p>
+  </aside>
+</section>
+
+<section class="publication-follow" aria-labelledby="follow-title">
+  <div class="shell narrow">
+    <div class="section-heading">
+      <h2 id="follow-title">{{ .Params.follow_title }}</h2>
+      <p>{{ .Params.follow_intro }}</p>
+    </div>
+    <div class="hero-actions">
+      {{ with .OutputFormats.Get "rss" }}
+      <a class="button" href="{{ .RelPermalink }}">Follow via RSS</a>
+      {{ end }}
+      <a class="text-link" href="mailto:contact@backtestdiscipline.com?subject=Published%20strategy%20suggestion">Suggest a published strategy <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
 </section>
 {{ end }}

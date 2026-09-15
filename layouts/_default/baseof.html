@@ -15,6 +15,9 @@
   <meta name="description" content="{{ $description }}">
   <meta name="author" content="{{ site.Params.author }}">
   <link rel="canonical" href="{{ .Permalink }}">
+  {{ with site.Home.OutputFormats.Get "rss" }}
+  <link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
+  {{ end }}
 
   <meta property="og:site_name" content="{{ site.Title }}">
   <meta property="og:title" content="{{ $pageTitle }}">
@@ -55,8 +58,8 @@
 
   <footer class="site-footer">
     <div class="shell footer-inner">
-      <p>Case studies, methods, and engineering notes from controlled strategy research.</p>
-      <p><a href="{{ "about/" | relURL }}">About</a> · <a href="mailto:contact@backtestdiscipline.com">Contact</a> · <a class="external-reference" href="https://github.com/MikhailKlemin/cryptobot-publishing">Source &amp; corrections {{ partial "icon.html" "external-link" }}</a></p>
+      <p>Published trading strategies, independently tested by Mikhail Klemin.</p>
+      <p><a href="{{ "about/" | relURL }}">About</a> · <a href="mailto:contact@backtestdiscipline.com">Contact</a>{{ with site.Home.OutputFormats.Get "rss" }} · <a href="{{ .RelPermalink }}">RSS</a>{{ end }} · <a class="external-reference" href="https://github.com/MikhailKlemin/cryptobot-publishing">Source &amp; corrections {{ partial "icon.html" "external-link" }}</a></p>
     </div>
   </footer>
 </body>

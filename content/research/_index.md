@@ -1,10 +1,12 @@
 ---
 title: "Research record"
-description: "A selective record of empirical falsifications, pre-evaluation stops, and the reproduction and prospective milestones that closed the project."
+description: "Independent evaluations of selected published strategies, alongside a historical archive of discovery tests, pre-evaluation stops, and reproduction milestones."
 intro: |-
-  The closed research program was not a single strategy test. Its lineage contains many candidate mechanisms and several different kinds of terminal outcome. A preserved checkpoint recorded **16 completed empirical studies and 16 empirical falsifications**. Other candidates stopped earlier because a frozen source requirement, data-admission rule, or capability boundary could not be satisfied.
+  I independently evaluate selected published strategies using `cryptobot-research`. Those individually scoped tests continue; the initial open-ended search for surviving strategies has ended. This record brings ongoing published-strategy evaluations together with selected cases from that historical archive.
 
-  This page is deliberately selective. It does not turn every internal iteration into a public article. The entries below are included because they show materially different ways controlled research can end.
+  A preserved checkpoint from the initial discovery phase recorded **16 completed empirical studies and 16 empirical falsifications**. That is a historical checkpoint, **not a running count** of this publication's evaluations. Other candidates stopped earlier because a frozen source requirement, data-admission rule, or capability boundary could not be satisfied.
+
+  The entries are deliberately selective. They show what particular tests established, not that all strategies fail or that a passing backtest would be ready to trade.
 groups:
   - title: "Empirical falsification"
     note: "Representative completed evaluations that reached a frozen empirical verdict."
@@ -33,8 +35,9 @@ groups:
         stage: "Data admission"
         outcome: "CLOSED BEFORE EVALUATION"
         ended: "Required at least 5,000 normalized rows per symbol; the real capture produced 4,995. The five-row shortfall was not filled or worked around after inspection."
-  - title: "Closure milestones"
-    note: "The two final scientific milestones closed the project with different kinds of result."
+  - title: "Initial discovery phase: closure milestones"
+    id: "closure-milestones"
+    note: "These two scientific milestones closed the initial discovery phase with different kinds of result, not all subsequent published-strategy evaluation."
     records:
       - case: "Benchmark 004 — independent reproduction"
         url: "/research/benchmark-004/"
@@ -60,7 +63,7 @@ Independent reimplementation and official-data recapture established that the ex
 
 [Research 005: why a positive return still failed →](/research/research-005/)
 
-The final prospective experiment shows the next step in the lineage: the reproduced executable strategy was frozen into a new 365-day holdout and failed two of its seven predeclared survival criteria.
+The final experiment of the initial discovery phase shows the next step in the lineage: the reproduced executable strategy was frozen for evaluation on a new 365-day holdout and failed two of its seven predeclared survival criteria. A before-evaluation freeze is not a claim of forward monitoring or live trading.
 
 ## How to read these outcomes
 
@@ -72,4 +75,4 @@ Keeping those categories separate is part of the research method. It prevents a 
 
 The internal research history contains more proposals, capability checks, source constraints, rejected discoveries, and implementation iterations than belong on a useful public page. Publishing all of them would blur the distinction between engineering history and research evidence.
 
-The public record will grow only when an additional case teaches something distinct and can be tied cleanly to preserved evidence. The aim is not to maximize the number of strategy names on the site. It is to make the research process inspectable without overstating what any individual experiment demonstrated.
+The public record grows through individually scoped evaluations of published strategies and selected historical cases tied to preserved evidence. Results are reported against each test's fixed criteria, whether they pass or fail; evidence limitations and pre-evaluation stops remain separate. The aim is to make the research process inspectable without overstating what any individual experiment demonstrated.

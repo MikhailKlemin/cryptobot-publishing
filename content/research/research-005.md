@@ -1,8 +1,12 @@
 ---
 title: "Research 005: why a positive return still failed"
 description: "A frozen one-year, 66-symbol evaluation produced a positive headline return but failed two predeclared survival criteria."
+date: 2026-09-05
+lastmod: 2026-09-15
+card_title: "A positive return was not enough to pass the test"
+card_summary: "The holdout gained +5.26% net after compounding (+20.50% arithmetic annualized mean return), but failed the frozen Sharpe and confidence requirements."
 layout: "case-study"
-eyebrow: "Prospective falsification case study"
+eyebrow: "Frozen holdout case study"
 summary: "The final experiment returned +5.26% net over the frozen holdout and a +20.50% annualized arithmetic mean return. It was still classified FALSIFIED because the Sharpe and dependence-aware confidence criteria did not pass."
 status: "FALSIFIED"
 period: "1 Sep 2025 – 31 Aug 2026"
@@ -10,7 +14,7 @@ universe: "66 frozen Binance Spot symbols"
 provider: "Binance Spot official public REST"
 publication:
   published: "5 Sep 2026"
-  updated: "5 Sep 2026"
+  updated: "15 Sep 2026"
   evidence_state: "closed"
 source_lineage:
   origin: "External public research repository"
@@ -91,6 +95,7 @@ evidence_files:
     description: "The parent lineage, 66-symbol universe, protected dates, provider contract, and authority boundaries."
     url: "/evidence/research-005/RESEARCH_005_EXPERIMENT.json"
     sha256: "799ffd35820836fd6877bddfe962c5a07b87aa397ecd58cf4443d949d87e4e11"
+editorial_update: "15 September 2026: clarified that prospective freezing refers to the capture/evaluation process, not a demonstrated forward-test timeline. The recorded metrics, evidence, and terminal outcome are unchanged."
 lineage_nav:
   - direction: "Previous in lineage"
     title: "Benchmark 004 — independent reproduction"
@@ -101,6 +106,8 @@ lineage_nav:
 ## The result in one sentence
 
 Research 005 was a one-shot prospective extension of an independently reproduced channel-breakout strategy. The holdout produced a positive return, but the complete acceptance rule had been written down before the data was captured. Two required conditions failed, so the terminal result remained `FALSIFIED`.
+
+Here, **prospective** refers to fixing the experiment before capture and evaluation. It should not be read as a claim that the tested market observations occurred after commitment, or that the strategy was monitored forward or traded live.
 
 That distinction is the point of the case study. A number can look attractive without being enough to pass the experiment that produced it.
 

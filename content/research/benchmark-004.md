@@ -1,6 +1,9 @@
 ---
 title: "Benchmark 004: reproduce the result before trusting it"
 description: "An independent reproduction of an external channel-breakout notebook, including a fresh official-data recapture and exact input comparison."
+date: 2026-09-05
+card_title: "Reproducing a backtest is not the same as validating a strategy"
+card_summary: "An external channel-breakout notebook and its input data were independently reproduced. The match preserved—not resolved—the methodological limitations."
 layout: "case-study"
 eyebrow: "Independent reproduction case study"
 summary: "Benchmark 004 asked a deliberately narrow question before any prospective extension: could independent machinery recover the same executable strategy behavior and the same underlying market-data panel? The terminal answer was FULL_REPLICATION_MATCH."

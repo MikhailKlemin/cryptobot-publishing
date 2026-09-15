@@ -5,9 +5,10 @@
     <h1>{{ .Title }}</h1>
     {{ with .Params.lead }}<div class="page-description note-lead">{{ . | markdownify }}</div>{{ else }}{{ with .Description }}<p class="page-description">{{ . }}</p>{{ end }}{{ end }}
     <div class="publication-meta" aria-label="Publication metadata">
+      <span>By <a href="{{ "about/" | relURL }}">{{ site.Params.author }}</a></span>
       <span>Published {{ .Date.Format "2 Jan 2006" }}</span>
       {{ with .Lastmod }}<span>Updated {{ .Format "2 Jan 2006" }}</span>{{ end }}
-      <span>Research state: closed</span>
+      <span>Based on a completed experiment</span>
     </div>
   </div>
 </section>

@@ -1,3 +1,79 @@
+.publication-section {
+  padding: 64px 0;
+  border-bottom: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.publication-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.publication-cadence {
+  margin: 18px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+.latest-study h2 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.3vw, 1.85rem);
+  line-height: 1.2;
+  letter-spacing: -.025em;
+}
+
+.latest-study h2 a,
+.publication-grid h3 a {
+  color: var(--text);
+  text-decoration: none;
+}
+
+.latest-study h2 a:hover,
+.publication-grid h3 a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+
+.latest-study > p:not(.card-label) {
+  color: var(--muted);
+}
+
+.study-context,
+.lane-card > .study-context {
+  font-size: .85rem;
+}
+
+.publication-about .intro-copy h2 {
+  margin-top: 0;
+}
+
+.publication-follow {
+  padding: 56px 0 64px;
+  border-top: 1px solid var(--line);
+  background: var(--accent-soft);
+}
+
+.publication-follow .section-heading {
+  margin-bottom: 0;
+}
+
+.case-reading-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 24px;
+  margin: 24px 0 0;
+  font-size: .9rem;
+}
+
+.case-verdict-note {
+  max-width: 780px;
+  margin: 20px 0 0;
+  color: var(--muted);
+  font-size: .95rem;
+}
+
 .lanes-section {
   padding: 72px 0 78px;
   border-top: 1px solid var(--line);
@@ -282,6 +358,12 @@
 }
 
 @media (max-width: 700px) {
+  .publication-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .publication-section,
+  .publication-follow,
   .lanes-section {
     padding-top: 54px;
     padding-bottom: 58px;

@@ -14,9 +14,10 @@
 
   <div class="research-groups">
     {{ range .Params.groups }}
-    <section class="research-group" aria-labelledby="{{ .title | anchorize }}">
+    {{ $id := .id | default (.title | anchorize) }}
+    <section class="research-group" aria-labelledby="{{ $id }}">
       <div class="research-group-heading">
-        <h2 id="{{ .title | anchorize }}">{{ .title }}</h2>
+        <h2 id="{{ $id }}">{{ .title }}</h2>
         <p>{{ .note }}</p>
       </div>
 

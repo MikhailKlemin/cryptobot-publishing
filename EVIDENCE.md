@@ -1,6 +1,14 @@
 # Editorial evidence map
 
-This file is internal publishing guidance and is not rendered by Hugo.
+This tracked file is public publishing guidance and is not rendered by Hugo. It preserves the provenance of published claims; local editorial plans are separate.
+
+## Publication scope clarification — 15 September 2026
+
+The initial archive documented the end of open-ended strategy discovery, not the end of the publication. Mikhail Klemin continues individually scoped evaluations of selected published strategies using `cryptobot-research`, with an aim of publishing roughly every two weeks. This editorial mission and cadence come from the maintainer; they are not conclusions of a historical experiment. Completed experiments, their outcomes, and their evidence remain unchanged.
+
+Published Strategy Replication 001 is a subsequent historical evaluation, not a live or forward-running test. Read-only review of its retained `published_trend_replication.go` implementation confirms evaluation dates of 1 February 2023 through 31 August 2026 (final holding interval ending at the 1 September 2026 open), geometric annualization `exp(mean daily net log return × 365) − 1`, and Sharpe based on mean daily net log return and annualized log-return volatility with zero risk-free rate. These details clarify the published date range and metric labels; no research was rerun or evidence rewritten.
+
+## Initial site provenance
 
 Authoritative source used for the initial site:
 
@@ -11,7 +19,7 @@ Authoritative source used for the initial site:
 
 Initial claims mapped to source evidence:
 
-- Research is closed; durable outcome is controlled research/reproducibility/falsification methodology: tracked-source `README.md`, "Project evolution and durable outcome".
+- The initial strategy-discovery phase closed; its durable outcome is controlled research/reproducibility/falsification methodology: tracked-source `README.md`, "Project evolution and durable outcome". This historical closure does not describe the status of all subsequent evaluations.
 - Benchmark 004 reached `FULL_REPLICATION_MATCH`: tracked-source `README.md`, "Final scientific state".
 - Research 005 period, frozen 66-symbol universe, +20.50% annualized net return, ~0.368 Sharpe, negative one-sided 95% HAC lower bound, 3/4 positive folds, ~-29.59% max drawdown, terminal `FALSIFIED`: tracked-source `README.md`, "Final scientific state".
 - No promotion into trading runtime; research repository is not a trading bot/runtime: tracked-source `README.md`, opening and "Scientific and authority boundaries".
