@@ -13,7 +13,7 @@ groups:
     records:
       - case: "Published Strategy Replication 001 — Le & Ruthbah BTC trend following"
         url: "/research/published-strategy-replication-001/"
-        stage: "Published-strategy replication"
+        stage: "Published-strategy out-of-sample evaluation"
         outcome: "FALSIFIED"
         ended: "All four published BTC lookbacks reduced maximum drawdown, but all four had negative mean excess return versus the frozen buy-and-hold benchmark. Zero of four variants survived the predeclared family rule."
       - case: "Attention-shock cycle"

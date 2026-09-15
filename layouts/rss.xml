@@ -3,26 +3,26 @@
   {{- $pages = where site.RegularPages "Section" "in" (slice "research" "notes") -}}
 {{- end -}}
 {{- $pages = $pages.ByDate.Reverse -}}
-{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
+{{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>{{ .Title }}</title>
-    <link>{{ .Permalink }}</link>
-    <description>{{ .Description | default site.Params.description }}</description>
-    <language>{{ site.Language.Locale | default "en-US" }}</language>
+    <title>{{ .Title | transform.XMLEscape }}</title>
+    <link>{{ .Permalink | transform.XMLEscape }}</link>
+    <description>{{ (.Description | default site.Params.description) | transform.XMLEscape }}</description>
+    <language>{{ (site.Language.Locale | default "en-US") | transform.XMLEscape }}</language>
     {{ with .OutputFormats.Get "rss" }}
-    <atom:link href="{{ .Permalink }}" rel="self" type="application/rss+xml" />
+    <atom:link href="{{ .Permalink | transform.XMLEscape }}" rel="self" type="application/rss+xml" />
     {{ end }}
     {{ range first 1 $pages.ByLastmod.Reverse }}
-    <lastBuildDate>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</lastBuildDate>
+    <lastBuildDate>{{ .Lastmod.Format "Mon, 02 Jan 2006 15:04:05 -0700" | transform.XMLEscape }}</lastBuildDate>
     {{ end }}
     {{ range $pages }}
     <item>
-      <title>{{ .Title }}</title>
-      <link>{{ .Permalink }}</link>
-      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" }}</pubDate>
-      <guid isPermaLink="true">{{ .Permalink }}</guid>
-      <description>{{ .Params.summary | default .Description }}</description>
+      <title>{{ .Title | transform.XMLEscape }}</title>
+      <link>{{ .Permalink | transform.XMLEscape }}</link>
+      <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | transform.XMLEscape }}</pubDate>
+      <guid isPermaLink="true">{{ .Permalink | transform.XMLEscape }}</guid>
+      <description>{{ (.Params.summary | default .Description) | transform.XMLEscape }}</description>
     </item>
     {{ end }}
   </channel>

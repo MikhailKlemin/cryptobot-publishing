@@ -1,13 +1,14 @@
 ---
 title: "Why a +20.5% annualized return still failed our strategy test"
-description: "A prospectively frozen strategy test finished with positive headline returns and still failed. Return was only one part of a decision rule fixed before the holdout was observed."
+description: "A frozen holdout test finished with positive headline returns and still failed. Return was only one part of a decision rule fixed before evaluation."
 lead: "The protected holdout recorded a +5.26% compounded net return and a +20.50% arithmetic annualized mean return. It still finished FALSIFIED because two required acceptance criteria did not pass."
-eyebrow: "Lesson from a prospective falsification test"
+eyebrow: "Lesson from a frozen holdout test"
 summary: "A positive return describes one dimension of a backtest. It does not override a multi-criterion acceptance rule that was fixed before the result was known."
 date: 2026-09-14
-lastmod: 2026-09-14
+lastmod: 2026-09-15
 source_case: "/research/research-005/"
-source_label: "Research 005 — prospective falsification case study"
+source_label: "Research 005 — frozen holdout case study"
+editorial_update: "15 September 2026: clarified that the experiment was frozen before capture/evaluation, which does not by itself establish a forward-running test. The recorded metrics and terminal outcome are unchanged."
 ---
 
 At first glance, the result looks contradictory.
@@ -68,7 +69,9 @@ The recorded Sharpe was about **0.368**. The HAC lower bound was about **−0.10
 
 Once those numbers existed, there was no extra clause saying “unless cumulative return is positive.” Positive return was already represented by its own criterion. It could not be counted twice and used to erase failures elsewhere.
 
-This is the part that prospective evaluation changes. If the rule is written only after the result appears, almost any attractive number can become the reason to accept the strategy. If the rule is frozen first, the result has to meet the rule rather than negotiate with it.
+This is what freezing the decision rule before evaluation changes. If the rule is written only after the result appears, almost any attractive number can become the reason to accept the strategy. If the rule is frozen first, the result has to meet the rule rather than negotiate with it.
+
+Freezing before capture and evaluation does not by itself mean the historical market observations occurred after commitment. This should not be read as evidence of a forward-monitored or live-traded strategy.
 
 ## Why the Sharpe failure mattered
 
@@ -181,6 +184,6 @@ But neither was allowed to overrule the two failed conditions either.
 
 For the complete experiment record, see [Research 005](/research/research-005/). The broader workflow is described in [Methodology](/methodology/). The frozen rules and terminal outputs are available directly in the public evidence files: [decision specification](/evidence/research-005/FROZEN_DECISION_SPEC.md), [deterministic evaluation](/evidence/research-005/EVALUATION.json), [experiment definition](/evidence/research-005/RESEARCH_005_EXPERIMENT.json), and [terminal result](/evidence/research-005/RESEARCH_005_RESULT.json).
 
-A concise six-page version is also available as the [Research 005 prospective evaluation report](/reports/research-005-prospective-evaluation-report.pdf).
+A concise six-page version is also available as the [Research 005 frozen holdout evaluation report](/reports/research-005-prospective-evaluation-report.pdf).
 
-No research was replayed, retuned or extended for this article. It is an editorial explanation of already-preserved evidence from the closed research program.
+No research was replayed, retuned or extended for this article. It is an editorial explanation of already-preserved evidence from the completed Research 005 experiment.

@@ -6,7 +6,7 @@ lastmod: 2026-09-15
 card_title: "A Bitcoin trend strategy reduced drawdown—but still failed"
 card_summary: "All four published lookbacks reduced drawdown. None met the frozen excess-return criteria against buy-and-hold in this subsequent out-of-sample test."
 layout: "case-study"
-eyebrow: "Published strategy replication"
+eyebrow: "Published strategy out-of-sample evaluation"
 summary: "We tested all four published BTC trend-following horizons on a subsequent out-of-sample period. Every variant reduced maximum drawdown, but every mean excess-return estimate was negative. Under the frozen family rule, 0 of 4 variants survived."
 status: "FALSIFIED"
 period_label: "Evaluation period"
@@ -23,7 +23,7 @@ source_lineage:
   source_url: "https://doi.org/10.2139/ssrn.4551518"
   source_id_label: "Publication source identity"
   source_id: "d185408c6c047a74f55f05868886deb46feaa6c37f4e51719ff6e904d4fa31c3"
-  relationship: "The paper studies BTC and ETH trend following over 20, 65, 150 and 200-day lookbacks. This replication froze all four published BTC horizons rather than selecting the historically strongest one, then evaluated them on a subsequent period using official Binance BTCUSDT daily bars, next-open execution, a fixed transaction-cost model and a predeclared survival rule."
+  relationship: "The paper studies BTC and ETH trend following over 20, 65, 150 and 200-day lookbacks. This out-of-sample evaluation froze all four published BTC horizons rather than selecting the historically strongest one, then evaluated them on a subsequent period using official Binance BTCUSDT daily bars, next-open execution, a fixed transaction-cost model and a predeclared survival rule."
 metric_guide:
   - term: "Annualized net return"
     explanation: "Geometric annualization: exp(mean daily net log return × 365) − 1. Unlike Research 005's arithmetic annualization, this expresses a compounded annual rate. Survival was based on excess return versus the benchmark, not this number alone."
@@ -75,7 +75,7 @@ evidence_files:
     description: "The FALSIFIED outcome, terminal reason, core lineage identities and action counters."
     url: "/evidence/published-strategy-replication-001/published-strategy-replication-001-research-result.json"
     sha256: "329ef70346266423bec9377f07553cf89a3bacd7d5cf237d388a7630ede4624d"
-editorial_update: "15 September 2026: clarified the historical evaluation period, implementation choices, geometric annualization, and log-return Sharpe. This was a before-capture freeze, not a live or forward-running test. The recorded metrics, evidence, and terminal outcome are unchanged."
+editorial_update: "15 September 2026: clarified the out-of-sample evaluation terminology, historical evaluation period, implementation choices, geometric annualization, and log-return Sharpe. This was a before-capture freeze, not a live or forward-running test. The recorded metrics, evidence, and terminal outcome are unchanged."
 ---
 
 ## The result in one sentence
@@ -94,9 +94,9 @@ For the long-only momentum family, the basic idea is simple: compare the asset w
 
 We did **not** take the historically strongest BTC horizon and call that the strategy. All four published lookbacks were carried forward as one frozen family.
 
-## Replication is not copying the historical backtest
+## An out-of-sample evaluation, not an original-result reproduction {#replication-is-not-copying-the-historical-backtest}
 
-The purpose of this experiment was not to reproduce the paper's historical performance table from the same source data. It was to evaluate the published mechanism on a subsequent historical period, with the implementation and acceptance rules fixed before capture and evaluation. This was not a live or forward-running test.
+The purpose of this experiment was not to reproduce the paper's historical performance table from the same source data. It was to evaluate the published mechanism on a subsequent historical period, with the implementation and acceptance rules fixed before capture and evaluation. This was not a live or forward-running test. The historical experiment identifier remains **Published Strategy Replication 001**; [Benchmark 004](/research/benchmark-004/) is the site's example of original-result reproduction.
 
 That required several choices that are easy to leave vague in a research paper but cannot remain vague in a deterministic evaluator.
 
@@ -177,9 +177,9 @@ The supported conclusion is narrower:
 
 **the published BTC trend-following mechanism did not survive this subsequent evaluation under our frozen data, timing, cost, benchmark and survival contract.**
 
-That is a replication result, not a universal claim about trend following and not an accusation about the original authors' work.
+That is an out-of-sample evaluation result, not a universal claim about trend following and not an accusation about the original authors' work.
 
-## Why a negative replication is useful
+## Why a negative extension result is useful {#why-a-negative-replication-is-useful}
 
 Published strategies are unusually easy to evaluate badly after the fact. One can choose the best published parameter, adjust the execution convention, change costs, emphasize Sharpe instead of return, or decide that drawdown reduction was the real objective only after seeing the results.
 

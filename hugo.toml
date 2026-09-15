@@ -4,6 +4,10 @@ locale = "en-US"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
+# RSS escapes XML explicitly; avoid a second pass through HTML auto-escaping.
+[outputFormats.RSS]
+  isPlainText = true
+
 [params]
   description = "Published trading strategies, independently tested. Evidence-backed evaluations and practical research lessons by Mikhail Klemin."
   author = "Mikhail Klemin"

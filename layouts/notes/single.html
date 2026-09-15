@@ -25,6 +25,12 @@
     {{ .Content }}
   </article>
 
+  {{ with .Params.editorial_update }}
+  <aside class="prose" aria-label="Editorial update">
+    <p><strong>Editorial update.</strong> {{ . }}</p>
+  </aside>
+  {{ end }}
+
   <nav class="note-back" aria-label="Notes navigation">
     <a class="text-link" href="{{ "notes/" | relURL }}">← Back to engineering notes</a>
   </nav>
