@@ -1,17 +1,21 @@
 ---
 title: "A published Bitcoin trend strategy reduced drawdown — but still failed"
-description: "A prospective four-horizon replication of a published BTC trend-following mechanism reduced drawdown at every lookback, but all four variants produced negative mean excess return versus the frozen benchmark."
+description: "A subsequent out-of-sample test of a published BTC trend-following mechanism reduced drawdown at every lookback, but all four variants produced negative mean excess return versus the frozen benchmark."
+date: 2026-09-14
+lastmod: 2026-09-15
+card_title: "A Bitcoin trend strategy reduced drawdown—but still failed"
+card_summary: "All four published lookbacks reduced drawdown. None met the frozen excess-return criteria against buy-and-hold in this subsequent out-of-sample test."
 layout: "case-study"
 eyebrow: "Published strategy replication"
 summary: "We tested all four published BTC trend-following horizons on a subsequent out-of-sample period. Every variant reduced maximum drawdown, but every mean excess-return estimate was negative. Under the frozen family rule, 0 of 4 variants survived."
 status: "FALSIFIED"
 period_label: "Evaluation period"
-period: "From 1 Feb 2023"
+period: "1 Feb 2023 – 31 Aug 2026"
 universe: "BTCUSDT · 20 / 65 / 150 / 200 days"
 provider: "Binance Spot public daily klines"
 publication:
   published: "14 Sep 2026"
-  updated: "14 Sep 2026"
+  updated: "15 Sep 2026"
   evidence_state: "closed"
 source_lineage:
   origin: "Published academic study"
@@ -22,9 +26,9 @@ source_lineage:
   relationship: "The paper studies BTC and ETH trend following over 20, 65, 150 and 200-day lookbacks. This replication froze all four published BTC horizons rather than selecting the historically strongest one, then evaluated them on a subsequent period using official Binance BTCUSDT daily bars, next-open execution, a fixed transaction-cost model and a predeclared survival rule."
 metric_guide:
   - term: "Annualized net return"
-    explanation: "The strategy's net return expressed at an annual rate under the frozen evaluator. It is useful for comparison, but survival was based on excess return versus the benchmark rather than this number alone."
+    explanation: "Geometric annualization: exp(mean daily net log return × 365) − 1. Unlike Research 005's arithmetic annualization, this expresses a compounded annual rate. Survival was based on excess return versus the benchmark, not this number alone."
   - term: "Net Sharpe"
-    explanation: "Return relative to observed volatility after costs. A higher Sharpe can coexist with lower absolute return, which is exactly what happened for some longer lookbacks here."
+    explanation: "Mean daily net log return × 365 divided by annualized daily log-return volatility, with a zero risk-free rate. A higher Sharpe can coexist with lower absolute return, as it did for some longer lookbacks here."
   - term: "Maximum drawdown"
     explanation: "The largest peak-to-trough decline in wealth. Every trend filter reduced this relative to the frozen buy-and-hold benchmark."
   - term: "Mean excess return"
@@ -71,6 +75,7 @@ evidence_files:
     description: "The FALSIFIED outcome, terminal reason, core lineage identities and action counters."
     url: "/evidence/published-strategy-replication-001/published-strategy-replication-001-research-result.json"
     sha256: "329ef70346266423bec9377f07553cf89a3bacd7d5cf237d388a7630ede4624d"
+editorial_update: "15 September 2026: clarified the historical evaluation period, implementation choices, geometric annualization, and log-return Sharpe. This was a before-capture freeze, not a live or forward-running test. The recorded metrics, evidence, and terminal outcome are unchanged."
 ---
 
 ## The result in one sentence
@@ -91,13 +96,17 @@ We did **not** take the historically strongest BTC horizon and call that the str
 
 ## Replication is not copying the historical backtest
 
-The purpose of this experiment was not to reproduce the paper's historical performance table from the same source data. It was to take the published mechanism seriously enough to specify it as a new prospective test.
+The purpose of this experiment was not to reproduce the paper's historical performance table from the same source data. It was to evaluate the published mechanism on a subsequent historical period, with the implementation and acceptance rules fixed before capture and evaluation. This was not a live or forward-running test.
 
 That required several choices that are easy to leave vague in a research paper but cannot remain vague in a deterministic evaluator.
 
 We used **BTCUSDT** daily bars from the official Binance Spot public API. Signals were calculated only after a completed UTC daily bar. If the target position changed, the new target became effective at the **following UTC daily open**. That next-open rule was frozen before capture as the conservative execution interpretation because the paper does not specify exchange execution timing precisely enough for a literal tradable implementation.
 
-The cost was fixed at **0.1% per traded leg**. The benchmark was a cost-adjusted BTC buy-and-hold portfolio evaluated under the same frozen contract.
+The cost was fixed at **0.1% per traded leg**, including initial entry and terminal liquidation where applicable. The benchmark was a cost-adjusted BTC buy-and-hold portfolio evaluated under the same frozen contract. Capital held flat earned zero.
+
+There were material differences from simply copying the paper's results. The original BTC series was an S&P Bitcoin index backed by Lukka Prime; this test used Binance BTCUSDT. The paper's printed average formula also has an n-versus-n−1-term ambiguity. The frozen interpretation followed its prose: the arithmetic mean of exactly n completed daily closes, including the signal day's close. The target was LONG only when that close exceeded the average; equality meant FLAT.
+
+The evaluation covered **1 February 2023 through 31 August 2026**, comprising 1,308 daily open-to-next-open holding intervals. The final interval ended at the **1 September 2026 UTC open**, when any remaining long position was liquidated with the specified exit cost.
 
 The capture itself was bounded: warm-up began on 16 July 2022, the data request returned **1509 of 1509 expected daily bars**, and the entire public capture used **two provider requests**.
 

@@ -5,23 +5,27 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  description = "Controlled trading-strategy evaluation: reproducibility, prospective freezing, provenance, and falsification."
-  author = "Backtest Discipline"
+  description = "Published trading strategies, independently tested. Evidence-backed evaluations and practical research lessons by Mikhail Klemin."
+  author = "Mikhail Klemin"
 
-[menu]
-  [[menu.main]]
+[menus]
+  [[menus.main]]
     name = "Home"
     pageRef = "/"
     weight = 10
-  [[menu.main]]
+  [[menus.main]]
     name = "Research"
     pageRef = "/research"
     weight = 20
-  [[menu.main]]
+  [[menus.main]]
     name = "Methodology"
     pageRef = "/methodology"
     weight = 30
-  [[menu.main]]
+  [[menus.main]]
     name = "Notes"
     pageRef = "/notes"
     weight = 40
+  [[menus.main]]
+    name = "About"
+    pageRef = "/about"
+    weight = 50

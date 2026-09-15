@@ -6,9 +6,10 @@
     <p class="page-description">{{ .Params.summary }}</p>
     {{ with .Params.publication }}
     <div class="publication-meta" aria-label="Publication metadata">
+      <span>By <a href="{{ "about/" | relURL }}">{{ site.Params.author }}</a></span>
       <span>Published {{ .published }}</span>
       <span>Updated {{ .updated }}</span>
-      <span>Evidence state: {{ .evidence_state }}</span>
+      <span>Experiment record: {{ .evidence_state }}</span>
     </div>
     {{ end }}
     <div class="case-study-meta" aria-label="Case study summary">
@@ -17,6 +18,16 @@
       <div><span>Universe</span><strong>{{ .Params.universe }}</strong></div>
       <div><span>Data source</span><strong>{{ .Params.provider }}</strong></div>
     </div>
+    {{ if eq .Params.status "FALSIFIED" }}
+    <p class="case-verdict-note">Here, <code>FALSIFIED</code> means this experiment failed its predeclared acceptance rule—not that every version of the strategy is disproved or that the original paper is wrong.</p>
+    {{ else if eq .Params.status "FULL_REPLICATION_MATCH" }}
+    <p class="case-verdict-note">The specified result was independently reproduced. A reproduction match does not establish future profitability or suitability for live trading.</p>
+    {{ end }}
+    <nav class="case-reading-nav" aria-label="On this page">
+      <a class="text-link" href="#case-explanation">Read the explanation</a>
+      {{ with .Params.criteria }}<a class="text-link" href="#criteria-title">See the decision rule</a>{{ end }}
+      {{ with .Params.evidence_files }}<a class="text-link" href="#evidence-files-title">Inspect the evidence</a>{{ end }}
+    </nav>
   </div>
 </section>
 
@@ -61,7 +72,7 @@
   </aside>
   {{ end }}
 
-  {{ $report := index site.Data.publication_reports .File.ContentBaseName }}
+  {{ $report := index hugo.Data.publication_reports .File.ContentBaseName }}
   {{ with $report }}
     {{ if fileExists .file }}
     <aside class="source-lineage" aria-labelledby="publication-report-title">
@@ -97,7 +108,7 @@
   </section>
   {{ end }}
 
-  <article class="prose case-study-prose">
+  <article class="prose case-study-prose" id="case-explanation">
     {{ .Content }}
   </article>
 
@@ -136,6 +147,7 @@
       <p class="eyebrow icon-eyebrow">{{ partial "icon.html" "archive" }}<span>Inspect the evidence</span></p>
       <h2 id="evidence-files-title">Selected preserved artifacts</h2>
       <p>{{ $.Params.evidence_note | default "These are selected text artifacts copied from the preserved terminal evidence. Raw market payloads, binaries, private paths, and unrelated runner material are intentionally not published." }}</p>
+      <p>These excerpts support inspection of the reported work; they are not a complete package for independently rerunning the experiment. <a href="{{ "about/#evidence-policy" | relURL }}">Read the evidence policy.</a></p>
     </div>
     <div class="evidence-file-list">
       {{ range . }}
@@ -164,6 +176,12 @@
     </a>
     {{ end }}
   </nav>
+  {{ end }}
+
+  {{ with .Params.editorial_update }}
+  <aside class="prose case-verdict-note" aria-label="Editorial update">
+    <p><strong>Editorial update.</strong> {{ . }}</p>
+  </aside>
   {{ end }}
 
   <nav class="case-study-back" aria-label="Research navigation">
